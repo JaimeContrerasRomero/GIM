@@ -24,7 +24,7 @@ namespace SistemaGIM {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class ds : global::System.Data.DataSet {
         
-        private sp_Usuario_seDataTable tablesp_Usuario_se;
+        private UsuarioDataTable tableUsuario;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace SistemaGIM {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["sp_Usuario_se"] != null)) {
-                    base.Tables.Add(new sp_Usuario_seDataTable(ds.Tables["sp_Usuario_se"]));
+                if ((ds.Tables["Usuario"] != null)) {
+                    base.Tables.Add(new UsuarioDataTable(ds.Tables["Usuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace SistemaGIM {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sp_Usuario_seDataTable sp_Usuario_se {
+        public UsuarioDataTable Usuario {
             get {
-                return this.tablesp_Usuario_se;
+                return this.tableUsuario;
             }
         }
         
@@ -152,8 +152,8 @@ namespace SistemaGIM {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["sp_Usuario_se"] != null)) {
-                    base.Tables.Add(new sp_Usuario_seDataTable(ds.Tables["sp_Usuario_se"]));
+                if ((ds.Tables["Usuario"] != null)) {
+                    base.Tables.Add(new UsuarioDataTable(ds.Tables["Usuario"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace SistemaGIM {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablesp_Usuario_se = ((sp_Usuario_seDataTable)(base.Tables["sp_Usuario_se"]));
+            this.tableUsuario = ((UsuarioDataTable)(base.Tables["Usuario"]));
             if ((initTable == true)) {
-                if ((this.tablesp_Usuario_se != null)) {
-                    this.tablesp_Usuario_se.InitVars();
+                if ((this.tableUsuario != null)) {
+                    this.tableUsuario.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace SistemaGIM {
             this.Namespace = "http://tempuri.org/ds.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablesp_Usuario_se = new sp_Usuario_seDataTable();
-            base.Tables.Add(this.tablesp_Usuario_se);
+            this.tableUsuario = new UsuarioDataTable();
+            base.Tables.Add(this.tableUsuario);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializesp_Usuario_se() {
+        private bool ShouldSerializeUsuario() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace SistemaGIM {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void sp_Usuario_seRowChangeEventHandler(object sender, sp_Usuario_seRowChangeEvent e);
+        public delegate void UsuarioRowChangeEventHandler(object sender, UsuarioRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sp_Usuario_seDataTable : global::System.Data.TypedTableBase<sp_Usuario_seRow> {
+        public partial class UsuarioDataTable : global::System.Data.TypedTableBase<UsuarioRow> {
             
             private global::System.Data.DataColumn columnIdUsuario;
             
@@ -297,8 +297,8 @@ namespace SistemaGIM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seDataTable() {
-                this.TableName = "sp_Usuario_se";
+            public UsuarioDataTable() {
+                this.TableName = "Usuario";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +306,7 @@ namespace SistemaGIM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sp_Usuario_seDataTable(global::System.Data.DataTable table) {
+            internal UsuarioDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,7 +323,7 @@ namespace SistemaGIM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected sp_Usuario_seDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected UsuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -403,34 +403,34 @@ namespace SistemaGIM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRow this[int index] {
+            public UsuarioRow this[int index] {
                 get {
-                    return ((sp_Usuario_seRow)(this.Rows[index]));
+                    return ((UsuarioRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_Usuario_seRowChangeEventHandler sp_Usuario_seRowChanging;
+            public event UsuarioRowChangeEventHandler UsuarioRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_Usuario_seRowChangeEventHandler sp_Usuario_seRowChanged;
+            public event UsuarioRowChangeEventHandler UsuarioRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_Usuario_seRowChangeEventHandler sp_Usuario_seRowDeleting;
+            public event UsuarioRowChangeEventHandler UsuarioRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event sp_Usuario_seRowChangeEventHandler sp_Usuario_seRowDeleted;
+            public event UsuarioRowChangeEventHandler UsuarioRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Addsp_Usuario_seRow(sp_Usuario_seRow row) {
+            public void AddUsuarioRow(UsuarioRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRow Addsp_Usuario_seRow(string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, byte Activo) {
-                sp_Usuario_seRow rowsp_Usuario_seRow = ((sp_Usuario_seRow)(this.NewRow()));
+            public UsuarioRow AddUsuarioRow(string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, byte Activo) {
+                UsuarioRow rowUsuarioRow = ((UsuarioRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Nombre,
@@ -440,22 +440,22 @@ namespace SistemaGIM {
                         Correo,
                         Password,
                         Activo};
-                rowsp_Usuario_seRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsp_Usuario_seRow);
-                return rowsp_Usuario_seRow;
+                rowUsuarioRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUsuarioRow);
+                return rowUsuarioRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRow FindByIdUsuario(int IdUsuario) {
-                return ((sp_Usuario_seRow)(this.Rows.Find(new object[] {
+            public UsuarioRow FindByIdUsuario(int IdUsuario) {
+                return ((UsuarioRow)(this.Rows.Find(new object[] {
                             IdUsuario})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sp_Usuario_seDataTable cln = ((sp_Usuario_seDataTable)(base.Clone()));
+                UsuarioDataTable cln = ((UsuarioDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,7 +463,7 @@ namespace SistemaGIM {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sp_Usuario_seDataTable();
+                return new UsuarioDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -521,28 +521,28 @@ namespace SistemaGIM {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRow Newsp_Usuario_seRow() {
-                return ((sp_Usuario_seRow)(this.NewRow()));
+            public UsuarioRow NewUsuarioRow() {
+                return ((UsuarioRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sp_Usuario_seRow(builder);
+                return new UsuarioRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sp_Usuario_seRow);
+                return typeof(UsuarioRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sp_Usuario_seRowChanged != null)) {
-                    this.sp_Usuario_seRowChanged(this, new sp_Usuario_seRowChangeEvent(((sp_Usuario_seRow)(e.Row)), e.Action));
+                if ((this.UsuarioRowChanged != null)) {
+                    this.UsuarioRowChanged(this, new UsuarioRowChangeEvent(((UsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -550,8 +550,8 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sp_Usuario_seRowChanging != null)) {
-                    this.sp_Usuario_seRowChanging(this, new sp_Usuario_seRowChangeEvent(((sp_Usuario_seRow)(e.Row)), e.Action));
+                if ((this.UsuarioRowChanging != null)) {
+                    this.UsuarioRowChanging(this, new UsuarioRowChangeEvent(((UsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -559,8 +559,8 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sp_Usuario_seRowDeleted != null)) {
-                    this.sp_Usuario_seRowDeleted(this, new sp_Usuario_seRowChangeEvent(((sp_Usuario_seRow)(e.Row)), e.Action));
+                if ((this.UsuarioRowDeleted != null)) {
+                    this.UsuarioRowDeleted(this, new UsuarioRowChangeEvent(((UsuarioRow)(e.Row)), e.Action));
                 }
             }
             
@@ -568,14 +568,14 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sp_Usuario_seRowDeleting != null)) {
-                    this.sp_Usuario_seRowDeleting(this, new sp_Usuario_seRowChangeEvent(((sp_Usuario_seRow)(e.Row)), e.Action));
+                if ((this.UsuarioRowDeleting != null)) {
+                    this.UsuarioRowDeleting(this, new UsuarioRowChangeEvent(((UsuarioRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Removesp_Usuario_seRow(sp_Usuario_seRow row) {
+            public void RemoveUsuarioRow(UsuarioRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -602,7 +602,7 @@ namespace SistemaGIM {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sp_Usuario_seDataTable";
+                attribute2.FixedValue = "UsuarioDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -646,25 +646,25 @@ namespace SistemaGIM {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sp_Usuario_seRow : global::System.Data.DataRow {
+        public partial class UsuarioRow : global::System.Data.DataRow {
             
-            private sp_Usuario_seDataTable tablesp_Usuario_se;
+            private UsuarioDataTable tableUsuario;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal sp_Usuario_seRow(global::System.Data.DataRowBuilder rb) : 
+            internal UsuarioRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesp_Usuario_se = ((sp_Usuario_seDataTable)(this.Table));
+                this.tableUsuario = ((UsuarioDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int IdUsuario {
                 get {
-                    return ((int)(this[this.tablesp_Usuario_se.IdUsuarioColumn]));
+                    return ((int)(this[this.tableUsuario.IdUsuarioColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.IdUsuarioColumn] = value;
+                    this[this.tableUsuario.IdUsuarioColumn] = value;
                 }
             }
             
@@ -672,10 +672,10 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Nombre {
                 get {
-                    return ((string)(this[this.tablesp_Usuario_se.NombreColumn]));
+                    return ((string)(this[this.tableUsuario.NombreColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.NombreColumn] = value;
+                    this[this.tableUsuario.NombreColumn] = value;
                 }
             }
             
@@ -683,10 +683,10 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string PrimerApellido {
                 get {
-                    return ((string)(this[this.tablesp_Usuario_se.PrimerApellidoColumn]));
+                    return ((string)(this[this.tableUsuario.PrimerApellidoColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.PrimerApellidoColumn] = value;
+                    this[this.tableUsuario.PrimerApellidoColumn] = value;
                 }
             }
             
@@ -694,10 +694,10 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string SegundoApellido {
                 get {
-                    return ((string)(this[this.tablesp_Usuario_se.SegundoApellidoColumn]));
+                    return ((string)(this[this.tableUsuario.SegundoApellidoColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.SegundoApellidoColumn] = value;
+                    this[this.tableUsuario.SegundoApellidoColumn] = value;
                 }
             }
             
@@ -706,14 +706,14 @@ namespace SistemaGIM {
             public byte[] Foto {
                 get {
                     try {
-                        return ((byte[])(this[this.tablesp_Usuario_se.FotoColumn]));
+                        return ((byte[])(this[this.tableUsuario.FotoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Foto\' in table \'sp_Usuario_se\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Foto\' in table \'Usuario\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_Usuario_se.FotoColumn] = value;
+                    this[this.tableUsuario.FotoColumn] = value;
                 }
             }
             
@@ -721,10 +721,10 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Correo {
                 get {
-                    return ((string)(this[this.tablesp_Usuario_se.CorreoColumn]));
+                    return ((string)(this[this.tableUsuario.CorreoColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.CorreoColumn] = value;
+                    this[this.tableUsuario.CorreoColumn] = value;
                 }
             }
             
@@ -732,10 +732,10 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Password {
                 get {
-                    return ((string)(this[this.tablesp_Usuario_se.PasswordColumn]));
+                    return ((string)(this[this.tableUsuario.PasswordColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.PasswordColumn] = value;
+                    this[this.tableUsuario.PasswordColumn] = value;
                 }
             }
             
@@ -743,23 +743,23 @@ namespace SistemaGIM {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte Activo {
                 get {
-                    return ((byte)(this[this.tablesp_Usuario_se.ActivoColumn]));
+                    return ((byte)(this[this.tableUsuario.ActivoColumn]));
                 }
                 set {
-                    this[this.tablesp_Usuario_se.ActivoColumn] = value;
+                    this[this.tableUsuario.ActivoColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsFotoNull() {
-                return this.IsNull(this.tablesp_Usuario_se.FotoColumn);
+                return this.IsNull(this.tableUsuario.FotoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetFotoNull() {
-                this[this.tablesp_Usuario_se.FotoColumn] = global::System.Convert.DBNull;
+                this[this.tableUsuario.FotoColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -767,22 +767,22 @@ namespace SistemaGIM {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class sp_Usuario_seRowChangeEvent : global::System.EventArgs {
+        public class UsuarioRowChangeEvent : global::System.EventArgs {
             
-            private sp_Usuario_seRow eventRow;
+            private UsuarioRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRowChangeEvent(sp_Usuario_seRow row, global::System.Data.DataRowAction action) {
+            public UsuarioRowChangeEvent(UsuarioRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public sp_Usuario_seRow Row {
+            public UsuarioRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -810,7 +810,7 @@ namespace SistemaGIM.dsTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sp_Usuario_seTableAdapter : global::System.ComponentModel.Component {
+    public partial class UsuarioTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -824,7 +824,7 @@ namespace SistemaGIM.dsTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public sp_Usuario_seTableAdapter() {
+        public UsuarioTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -921,7 +921,7 @@ namespace SistemaGIM.dsTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sp_Usuario_se";
+            tableMapping.DataSetTable = "Usuario";
             tableMapping.ColumnMappings.Add("IdUsuario", "IdUsuario");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("PrimerApellido", "PrimerApellido");
@@ -994,7 +994,7 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(ds.sp_Usuario_seDataTable dataTable, global::System.Nullable<int> IdUsuario, string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, global::System.Nullable<byte> Activo) {
+        public virtual int Fill(ds.UsuarioDataTable dataTable, global::System.Nullable<int> IdUsuario, string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, global::System.Nullable<byte> Activo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((IdUsuario.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdUsuario.Value));
@@ -1055,7 +1055,7 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual ds.sp_Usuario_seDataTable GetData(global::System.Nullable<int> IdUsuario, string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, global::System.Nullable<byte> Activo) {
+        public virtual ds.UsuarioDataTable GetData(global::System.Nullable<int> IdUsuario, string Nombre, string PrimerApellido, string SegundoApellido, byte[] Foto, string Correo, string Password, global::System.Nullable<byte> Activo) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((IdUsuario.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(IdUsuario.Value));
@@ -1105,7 +1105,7 @@ namespace SistemaGIM.dsTableAdapters {
             else {
                 this.Adapter.SelectCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            ds.sp_Usuario_seDataTable dataTable = new ds.sp_Usuario_seDataTable();
+            ds.UsuarioDataTable dataTable = new ds.UsuarioDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1113,7 +1113,7 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(ds.sp_Usuario_seDataTable dataTable) {
+        public virtual int Update(ds.UsuarioDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1121,7 +1121,7 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(ds dataSet) {
-            return this.Adapter.Update(dataSet, "sp_Usuario_se");
+            return this.Adapter.Update(dataSet, "Usuario");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1311,7 +1311,7 @@ namespace SistemaGIM.dsTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private sp_Usuario_seTableAdapter _sp_Usuario_seTableAdapter;
+        private UsuarioTableAdapter _usuarioTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1333,12 +1333,12 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public sp_Usuario_seTableAdapter sp_Usuario_seTableAdapter {
+        public UsuarioTableAdapter UsuarioTableAdapter {
             get {
-                return this._sp_Usuario_seTableAdapter;
+                return this._usuarioTableAdapter;
             }
             set {
-                this._sp_Usuario_seTableAdapter = value;
+                this._usuarioTableAdapter = value;
             }
         }
         
@@ -1361,9 +1361,9 @@ namespace SistemaGIM.dsTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._sp_Usuario_seTableAdapter != null) 
-                            && (this._sp_Usuario_seTableAdapter.Connection != null))) {
-                    return this._sp_Usuario_seTableAdapter.Connection;
+                if (((this._usuarioTableAdapter != null) 
+                            && (this._usuarioTableAdapter.Connection != null))) {
+                    return this._usuarioTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1378,7 +1378,7 @@ namespace SistemaGIM.dsTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._sp_Usuario_seTableAdapter != null)) {
+                if ((this._usuarioTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1392,12 +1392,12 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(ds dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sp_Usuario_seTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.sp_Usuario_se.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._sp_Usuario_seTableAdapter.Update(updatedRows));
+                    result = (result + this._usuarioTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1411,11 +1411,11 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(ds dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._sp_Usuario_seTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.sp_Usuario_se.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._sp_Usuario_seTableAdapter.Update(addedRows));
+                    result = (result + this._usuarioTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1429,11 +1429,11 @@ namespace SistemaGIM.dsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(ds dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._sp_Usuario_seTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.sp_Usuario_se.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._usuarioTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._sp_Usuario_seTableAdapter.Update(deletedRows));
+                    result = (result + this._usuarioTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1476,8 +1476,8 @@ namespace SistemaGIM.dsTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._sp_Usuario_seTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._sp_Usuario_seTableAdapter.Connection) == false))) {
+            if (((this._usuarioTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._usuarioTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1513,13 +1513,13 @@ namespace SistemaGIM.dsTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._sp_Usuario_seTableAdapter != null)) {
-                    revertConnections.Add(this._sp_Usuario_seTableAdapter, this._sp_Usuario_seTableAdapter.Connection);
-                    this._sp_Usuario_seTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._sp_Usuario_seTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._sp_Usuario_seTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._sp_Usuario_seTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._sp_Usuario_seTableAdapter.Adapter);
+                if ((this._usuarioTableAdapter != null)) {
+                    revertConnections.Add(this._usuarioTableAdapter, this._usuarioTableAdapter.Connection);
+                    this._usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._usuarioTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._usuarioTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1580,9 +1580,9 @@ namespace SistemaGIM.dsTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._sp_Usuario_seTableAdapter != null)) {
-                    this._sp_Usuario_seTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._sp_Usuario_seTableAdapter]));
-                    this._sp_Usuario_seTableAdapter.Transaction = null;
+                if ((this._usuarioTableAdapter != null)) {
+                    this._usuarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usuarioTableAdapter]));
+                    this._usuarioTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

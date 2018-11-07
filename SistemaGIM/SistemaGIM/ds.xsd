@@ -7,7 +7,7 @@
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GYMConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GYMConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SistemaGIM.Properties.Settings.GlobalReference.Default.GYMConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="sp_Usuario_seTableAdapter" GeneratorDataComponentClassName="sp_Usuario_seTableAdapter" Name="sp_Usuario_se" UserDataComponentName="sp_Usuario_seTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UsuarioTableAdapter" GeneratorDataComponentClassName="UsuarioTableAdapter" Name="Usuario" UserDataComponentName="UsuarioTableAdapter">
             <MainSource>
               <DbSource ConnectionRef="GYMConnectionString (Settings)" DbObjectName="GYM.dbo.sp_Usuario_se" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
@@ -88,7 +88,7 @@
   <xs:element name="ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds" msprop:Generator_UserDSName="ds">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="sp_Usuario_se" msprop:Generator_TableClassName="sp_Usuario_seDataTable" msprop:Generator_TableVarName="tablesp_Usuario_se" msprop:Generator_TablePropName="sp_Usuario_se" msprop:Generator_RowDeletingName="sp_Usuario_seRowDeleting" msprop:Generator_RowChangingName="sp_Usuario_seRowChanging" msprop:Generator_RowEvHandlerName="sp_Usuario_seRowChangeEventHandler" msprop:Generator_RowDeletedName="sp_Usuario_seRowDeleted" msprop:Generator_UserTableName="sp_Usuario_se" msprop:Generator_RowChangedName="sp_Usuario_seRowChanged" msprop:Generator_RowEvArgName="sp_Usuario_seRowChangeEvent" msprop:Generator_RowClassName="sp_Usuario_seRow">
+        <xs:element name="Usuario" msprop:Generator_TableClassName="UsuarioDataTable" msprop:Generator_TableVarName="tableUsuario" msprop:Generator_RowChangedName="UsuarioRowChanged" msprop:Generator_TablePropName="Usuario" msprop:Generator_RowDeletingName="UsuarioRowDeleting" msprop:Generator_RowChangingName="UsuarioRowChanging" msprop:Generator_RowEvHandlerName="UsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="UsuarioRowDeleted" msprop:Generator_RowClassName="UsuarioRow" msprop:Generator_UserTableName="Usuario" msprop:Generator_RowEvArgName="UsuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IdUsuario" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnIdUsuario" msprop:Generator_ColumnPropNameInRow="IdUsuario" msprop:Generator_ColumnPropNameInTable="IdUsuarioColumn" msprop:Generator_UserColumnName="IdUsuario" type="xs:int" />
@@ -135,7 +135,7 @@
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:sp_Usuario_se" />
+      <xs:selector xpath=".//mstns:Usuario" />
       <xs:field xpath="mstns:IdUsuario" />
     </xs:unique>
   </xs:element>
