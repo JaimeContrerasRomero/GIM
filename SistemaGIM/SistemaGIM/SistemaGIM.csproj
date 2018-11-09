@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bitacoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bitacoras.Designer.cs">
+      <DependentUpon>Bitacoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="BocetoCatalogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bitacoras.resx">
+      <DependentUpon>Bitacoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BocetoCatalogo.resx">
       <DependentUpon>BocetoCatalogo.cs</DependentUpon>
     </EmbeddedResource>
