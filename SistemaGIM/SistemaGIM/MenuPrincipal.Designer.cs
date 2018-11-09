@@ -30,15 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnCompra = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -50,6 +52,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // lblUsuario
             // 
@@ -86,26 +98,6 @@
             this.tabPage1.Text = "Catalogos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modulos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // btnBoceto
             // 
             this.btnBoceto.Image = ((System.Drawing.Image)(resources.GetObject("btnBoceto.Image")));
@@ -118,6 +110,29 @@
             this.btnBoceto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnCompra);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(863, 388);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Modulos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnCompra
+            // 
+            this.btnCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnCompra.Image")));
+            this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCompra.Location = new System.Drawing.Point(30, 30);
+            this.btnCompra.Name = "btnCompra";
+            this.btnCompra.Size = new System.Drawing.Size(75, 68);
+            this.btnCompra.TabIndex = 1;
+            this.btnCompra.Text = "&Compra";
+            this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCompra.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
@@ -135,6 +150,7 @@
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +164,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnBoceto;
+        private System.Windows.Forms.Button btnCompra;
     }
 }

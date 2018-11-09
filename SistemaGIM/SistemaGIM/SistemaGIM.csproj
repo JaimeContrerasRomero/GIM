@@ -51,6 +51,12 @@
     <Compile Include="BocetoCatalogo.Designer.cs">
       <DependentUpon>BocetoCatalogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Compras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compras.Designer.cs">
+      <DependentUpon>Compras.cs</DependentUpon>
+    </Compile>
     <Compile Include="ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +84,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BocetoCatalogo.resx">
       <DependentUpon>BocetoCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compras.resx">
+      <DependentUpon>Compras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -121,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icons\cancelar.png" />
+    <Content Include="icons\compra.png" />
     <Content Include="icons\editar.png" />
     <Content Include="icons\eliminar.png" />
     <Content Include="icons\guardar.png" />
