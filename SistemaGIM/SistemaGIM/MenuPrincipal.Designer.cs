@@ -31,12 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblUsuario = new System.Windows.Forms.Label();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnBoceto = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,16 +64,6 @@
             this.lblUsuario.Text = "JAIME CONTRERAS ROMERO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -85,6 +77,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnBoceto);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -103,6 +96,29 @@
             this.tabPage2.Text = "Modulos";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // btnBoceto
+            // 
+            this.btnBoceto.Image = ((System.Drawing.Image)(resources.GetObject("btnBoceto.Image")));
+            this.btnBoceto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBoceto.Location = new System.Drawing.Point(31, 31);
+            this.btnBoceto.Name = "btnBoceto";
+            this.btnBoceto.Size = new System.Drawing.Size(75, 68);
+            this.btnBoceto.TabIndex = 0;
+            this.btnBoceto.Text = "&Boceto Catalogo";
+            this.btnBoceto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBoceto.UseVisualStyleBackColor = true;
+            this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,10 +128,13 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -128,5 +147,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button btnBoceto;
     }
 }

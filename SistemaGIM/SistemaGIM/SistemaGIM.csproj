@@ -45,6 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BocetoCatalogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BocetoCatalogo.Designer.cs">
+      <DependentUpon>BocetoCatalogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BocetoCatalogo.resx">
+      <DependentUpon>BocetoCatalogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

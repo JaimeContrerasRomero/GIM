@@ -46,6 +46,8 @@ namespace SistemaGIM
                         this.NombreCompleto = row["Nombre"].ToString() + " " + row["PrimerApellido"].ToString() + " " + row["SegundoApellido"].ToString();
                         //Ir al menú principal
                         MenuPrincipal mp = new MenuPrincipal();
+                        mp.IdUsuario = this.IdUsuario;
+                        mp.NombreCompleto = this.NombreCompleto;
                         mp.Show();
                         this.Hide();
                     }

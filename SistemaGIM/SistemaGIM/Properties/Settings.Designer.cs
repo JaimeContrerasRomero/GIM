@@ -26,11 +26,22 @@ namespace SistemaGIM.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.52.243.43;Initial Catalog=GYM;Persist Security Info=True;User ID=" +
-            "AdminGYM;Password=S1st3m4GYM")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-0UF1T1B;Initial Catalog=GYM;Persist Security Info=True;User I" +
+            "D=sa;Password=066z0043")]
         public string GYMConnectionString {
             get {
                 return ((string)(this["GYMConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-0UF1T1B;Initial Catalog=GIM;Persist Security Info=True;User I" +
+            "D=sa;Password=066z0043")]
+        public string GIMConnectionString {
+            get {
+                return ((string)(this["GIMConnectionString"]));
             }
         }
     }
