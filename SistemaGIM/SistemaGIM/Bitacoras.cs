@@ -16,5 +16,10 @@ namespace SistemaGIM
         {
             InitializeComponent();
         }
+
+        private void Bitacoras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

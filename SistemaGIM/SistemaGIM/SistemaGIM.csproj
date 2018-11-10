@@ -138,6 +138,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icons\bitacora.png" />
     <Content Include="icons\cancelar.png" />
     <Content Include="icons\compra.png" />
     <Content Include="icons\editar.png" />
