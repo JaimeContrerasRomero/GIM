@@ -39,5 +39,11 @@ namespace SistemaGIM
             BocetoCatalogo bc = new BocetoCatalogo();
             bc.ShowDialog();
         }
+
+        private void btn_productos_Click(object sender, EventArgs e)
+        {
+            SocioPesos sp = new SocioPesos();
+            sp.ShowDialog();
+        }
     }
 }
