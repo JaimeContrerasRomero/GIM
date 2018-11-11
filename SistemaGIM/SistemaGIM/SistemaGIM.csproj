@@ -89,6 +89,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventarios.Designer.cs">
+      <DependentUpon>Inventarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventarios.resx">
+      <DependentUpon>Inventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -187,6 +196,7 @@
     <Content Include="icons\eliminar.png" />
     <Content Include="icons\guardar.png" />
     <Content Include="icons\insertar.png" />
+    <Content Include="icons\inventario.png" />
     <Content Include="icons\login.png" />
     <Content Include="icons\pesa.ico" />
     <Content Include="icons\pesa.png" />

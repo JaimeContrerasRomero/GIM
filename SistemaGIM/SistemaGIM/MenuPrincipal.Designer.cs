@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btn_inventario = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -53,19 +54,32 @@
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(871, 51);
+            this.panel1.Size = new System.Drawing.Size(1161, 63);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1100, 4);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(57, 53);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblUsuario.Location = new System.Drawing.Point(551, 13);
+            this.lblUsuario.Location = new System.Drawing.Point(735, 16);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblUsuario.Size = new System.Drawing.Size(259, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(317, 25);
             this.lblUsuario.TabIndex = 0;
             this.lblUsuario.Text = "JAIME CONTRERAS ROMERO";
             this.lblUsuario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -75,44 +89,33 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 51);
+            this.tabControl1.Location = new System.Drawing.Point(0, 63);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(871, 414);
+            this.tabControl1.Size = new System.Drawing.Size(1161, 509);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.btnBitacora);
             this.tabPage1.Controls.Add(this.btnBoceto);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(863, 388);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1153, 480);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Catalogos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnProveedores);
-            this.tabPage2.Controls.Add(this.btn_productos);
-            this.tabPage2.Controls.Add(this.btnProductos);
-            this.tabPage2.Controls.Add(this.btnCompra);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modulos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // btnBitacora
             // 
             this.btnBitacora.Image = ((System.Drawing.Image)(resources.GetObject("btnBitacora.Image")));
-            this.btnBitacora.Location = new System.Drawing.Point(137, 31);
+            this.btnBitacora.Location = new System.Drawing.Point(183, 38);
+            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBitacora.Name = "btnBitacora";
-            this.btnBitacora.Size = new System.Drawing.Size(75, 68);
+            this.btnBitacora.Size = new System.Drawing.Size(100, 84);
             this.btnBitacora.TabIndex = 1;
             this.btnBitacora.Text = "&Bitacora";
             this.btnBitacora.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -122,22 +125,40 @@
             // 
             this.btnBoceto.Image = ((System.Drawing.Image)(resources.GetObject("btnBoceto.Image")));
             this.btnBoceto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBoceto.Location = new System.Drawing.Point(31, 31);
+            this.btnBoceto.Location = new System.Drawing.Point(41, 38);
+            this.btnBoceto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBoceto.Name = "btnBoceto";
-            this.btnBoceto.Size = new System.Drawing.Size(75, 68);
+            this.btnBoceto.Size = new System.Drawing.Size(100, 84);
             this.btnBoceto.TabIndex = 0;
             this.btnBoceto.Text = "&Boceto Catalogo";
             this.btnBoceto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btn_inventario);
+            this.tabPage2.Controls.Add(this.btnProveedores);
+            this.tabPage2.Controls.Add(this.btn_productos);
+            this.tabPage2.Controls.Add(this.btnProductos);
+            this.tabPage2.Controls.Add(this.btnCompra);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1153, 480);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Modulos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // btnProveedores
             // 
             this.btnProveedores.Image = global::SistemaGIM.Properties.Resources.proveedores;
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProveedores.Location = new System.Drawing.Point(326, 30);
+            this.btnProveedores.Location = new System.Drawing.Point(435, 37);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProveedores.Name = "btnProveedores";
-            this.btnProveedores.Size = new System.Drawing.Size(75, 68);
+            this.btnProveedores.Size = new System.Drawing.Size(100, 84);
             this.btnProveedores.TabIndex = 4;
             this.btnProveedores.Text = "&Proveedores";
             this.btnProveedores.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -147,9 +168,10 @@
             // 
             this.btn_productos.Image = ((System.Drawing.Image)(resources.GetObject("btn_productos.Image")));
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_productos.Location = new System.Drawing.Point(223, 30);
+            this.btn_productos.Location = new System.Drawing.Point(297, 37);
+            this.btn_productos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_productos.Name = "btn_productos";
-            this.btn_productos.Size = new System.Drawing.Size(75, 68);
+            this.btn_productos.Size = new System.Drawing.Size(100, 84);
             this.btn_productos.TabIndex = 3;
             this.btn_productos.Text = "&SocioPeso";
             this.btn_productos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -160,9 +182,10 @@
             // 
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProductos.Location = new System.Drawing.Point(122, 30);
+            this.btnProductos.Location = new System.Drawing.Point(163, 37);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(75, 68);
+            this.btnProductos.Size = new System.Drawing.Size(100, 84);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "&Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -172,32 +195,37 @@
             // 
             this.btnCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnCompra.Image")));
             this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCompra.Location = new System.Drawing.Point(30, 30);
+            this.btnCompra.Location = new System.Drawing.Point(40, 37);
+            this.btnCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCompra.Name = "btnCompra";
-            this.btnCompra.Size = new System.Drawing.Size(75, 68);
+            this.btnCompra.Size = new System.Drawing.Size(100, 84);
             this.btnCompra.TabIndex = 1;
             this.btnCompra.Text = "&Compra";
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
-            // btnCerrarSesion
+            // btn_inventario
             // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btn_inventario.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventario.Image")));
+            this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_inventario.Location = new System.Drawing.Point(556, 37);
+            this.btn_inventario.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_inventario.Name = "btn_inventario";
+            this.btn_inventario.Size = new System.Drawing.Size(100, 84);
+            this.btn_inventario.TabIndex = 5;
+            this.btn_inventario.Text = "&inventario";
+            this.btn_inventario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_inventario.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 465);
+            this.ClientSize = new System.Drawing.Size(1161, 572);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
@@ -227,5 +255,6 @@
         private System.Windows.Forms.Button btnBitacora;
         private System.Windows.Forms.Button btn_productos;
         private System.Windows.Forms.Button btnProveedores;
+        private System.Windows.Forms.Button btn_inventario;
     }
 }
