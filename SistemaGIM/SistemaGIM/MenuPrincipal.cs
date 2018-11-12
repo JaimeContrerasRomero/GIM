@@ -24,9 +24,10 @@ namespace SistemaGIM
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
             //CERRAR TODO Y MANDARME AL LOGIN
+            this.Hide();
             Login l = new Login();
-            l.Show();
-            this.Close();
+            l.ShowDialog();
+            
         }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
