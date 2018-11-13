@@ -78,6 +78,9 @@
     <Compile Include="Compras.Designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ds.cs">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

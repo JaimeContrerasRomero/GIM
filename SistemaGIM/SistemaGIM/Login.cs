@@ -44,12 +44,15 @@ namespace SistemaGIM
                         DataRow row = ds.Tables[0].Rows[0];
                         this.IdUsuario = int.Parse(row["IdUsuario"].ToString());
                         this.NombreCompleto = row["Nombre"].ToString() + " " + row["PrimerApellido"].ToString() + " " + row["SegundoApellido"].ToString();
+
                         //Ir al menú principal
+                        this.Hide();
                         MenuPrincipal mp = new MenuPrincipal();
                         mp.IdUsuario = this.IdUsuario;
                         mp.NombreCompleto = this.NombreCompleto;
-                        mp.Show();
-                        this.Hide();
+                        mp.ShowDialog();
+                        
+                        this.Close();
                     }
                     else
                     {
