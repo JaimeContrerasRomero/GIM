@@ -133,6 +133,12 @@
     <Compile Include="SocioPesos.Designer.cs">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </Compile>
+    <Compile Include="SociosAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SociosAsistencias.Designer.cs">
+      <DependentUpon>SociosAsistencias.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bitacoras.resx">
       <DependentUpon>Bitacoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,9 @@
     <EmbeddedResource Include="SocioPesos.resx">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SociosAsistencias.resx">
+      <DependentUpon>SociosAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ds.xsc">
       <DependentUpon>ds.xsd</DependentUpon>
     </None>
@@ -212,6 +221,7 @@
     <Content Include="icons\proveedores.png" />
     <Content Include="icons\reporte.png" />
     <Content Include="icons\shopping-icon.png" />
+    <Content Include="icons\SociosAsistencias.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
