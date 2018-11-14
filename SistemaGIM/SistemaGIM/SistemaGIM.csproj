@@ -86,6 +86,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios.resx">
       <DependentUpon>Inventarios.cs</DependentUpon>
