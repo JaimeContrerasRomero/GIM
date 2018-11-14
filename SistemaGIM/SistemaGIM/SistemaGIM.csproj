@@ -78,10 +78,19 @@
     <Compile Include="Compras.Designer.cs">
       <DependentUpon>Compras.cs</DependentUpon>
     </Compile>
+    <Compile Include="ds.cs">
+      <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ds.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos.Designer.cs">
+      <DependentUpon>Equipos.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -133,11 +142,17 @@
     <Compile Include="SocioPesos.Designer.cs">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </Compile>
-    <Compile Include="SociosAsistencias.cs">
+    <Compile Include="socios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SociosAsistencias.Designer.cs">
-      <DependentUpon>SociosAsistencias.cs</DependentUpon>
+    <Compile Include="socios.Designer.cs">
+      <DependentUpon>socios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SociosMembresias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SociosMembresias.Designer.cs">
+      <DependentUpon>SociosMembresias.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Bitacoras.resx">
       <DependentUpon>Bitacoras.cs</DependentUpon>
@@ -147,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos.resx">
+      <DependentUpon>Equipos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventarios.resx">
       <DependentUpon>Inventarios.cs</DependentUpon>
@@ -179,8 +197,11 @@
     <EmbeddedResource Include="SocioPesos.resx">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SociosAsistencias.resx">
-      <DependentUpon>SociosAsistencias.cs</DependentUpon>
+    <EmbeddedResource Include="socios.resx">
+      <DependentUpon>socios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SociosMembresias.resx">
+      <DependentUpon>SociosMembresias.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ds.xsc">
       <DependentUpon>ds.xsd</DependentUpon>
@@ -210,6 +231,7 @@
     <Content Include="icons\bitacora.png" />
     <Content Include="icons\cancelar.png" />
     <Content Include="icons\compra.png" />
+    <Content Include="icons\document-icon.png" />
     <Content Include="icons\editar.png" />
     <Content Include="icons\eliminar.png" />
     <Content Include="icons\guardar.png" />
@@ -221,7 +243,7 @@
     <Content Include="icons\proveedores.png" />
     <Content Include="icons\reporte.png" />
     <Content Include="icons\shopping-icon.png" />
-    <Content Include="icons\SociosAsistencias.png" />
+    <Content Include="icons\socio.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
