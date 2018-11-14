@@ -136,6 +136,12 @@
     <Compile Include="SocioPesos.Designer.cs">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </Compile>
+    <Compile Include="socios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="socios.Designer.cs">
+      <DependentUpon>socios.cs</DependentUpon>
+    </Compile>
     <Compile Include="SociosMembresias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     <EmbeddedResource Include="SocioPesos.resx">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="socios.resx">
+      <DependentUpon>socios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SociosMembresias.resx">
       <DependentUpon>SociosMembresias.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +234,7 @@
     <Content Include="icons\proveedores.png" />
     <Content Include="icons\reporte.png" />
     <Content Include="icons\shopping-icon.png" />
+    <Content Include="icons\socio.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

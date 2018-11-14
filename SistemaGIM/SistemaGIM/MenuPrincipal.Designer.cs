@@ -30,19 +30,20 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_socios = new System.Windows.Forms.Button();
             this.btnSociosMembresias = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -58,16 +59,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 51);
             this.panel1.TabIndex = 0;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // lblUsuario
             // 
@@ -105,6 +96,23 @@
             this.tabPage1.Text = "Catalogos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btn_socios);
+            this.tabPage2.Controls.Add(this.btnSociosMembresias);
+            this.tabPage2.Controls.Add(this.btn_inventario);
+            this.tabPage2.Controls.Add(this.btnProveedores);
+            this.tabPage2.Controls.Add(this.btn_productos);
+            this.tabPage2.Controls.Add(this.btnProductos);
+            this.tabPage2.Controls.Add(this.btnCompra);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(863, 388);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Modulos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // btnBitacora
             // 
             this.btnBitacora.Image = ((System.Drawing.Image)(resources.GetObject("btnBitacora.Image")));
@@ -129,21 +137,17 @@
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
             // 
-            // tabPage2
+            // btn_socios
             // 
-            this.tabPage2.Controls.Add(this.btnSociosMembresias);
-            this.tabPage2.Controls.Add(this.btn_inventario);
-            this.tabPage2.Controls.Add(this.btnProveedores);
-            this.tabPage2.Controls.Add(this.btn_productos);
-            this.tabPage2.Controls.Add(this.btnProductos);
-            this.tabPage2.Controls.Add(this.btnCompra);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modulos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btn_socios.Image = global::SistemaGIM.Properties.Resources.socio;
+            this.btn_socios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_socios.Location = new System.Drawing.Point(613, 30);
+            this.btn_socios.Name = "btn_socios";
+            this.btn_socios.Size = new System.Drawing.Size(75, 68);
+            this.btn_socios.TabIndex = 7;
+            this.btn_socios.Text = "socios";
+            this.btn_socios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_socios.UseVisualStyleBackColor = true;
             // 
             // btnSociosMembresias
             // 
@@ -218,6 +222,16 @@
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,5 +271,6 @@
         private System.Windows.Forms.Button btnProveedores;
         private System.Windows.Forms.Button btn_inventario;
         private System.Windows.Forms.Button btnSociosMembresias;
+        private System.Windows.Forms.Button btn_socios;
     }
 }
