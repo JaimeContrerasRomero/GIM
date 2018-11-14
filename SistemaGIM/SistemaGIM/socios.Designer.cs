@@ -281,6 +281,7 @@
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "socios";
             this.Text = "socios";
             this.pnlBotones.ResumeLayout(false);
