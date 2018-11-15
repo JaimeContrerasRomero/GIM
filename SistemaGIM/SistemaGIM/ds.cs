@@ -9,7 +9,4 @@
 
 namespace SistemaGIM.dsTableAdapters {
     
-    
-    public partial class BitacoraTableAdapter {
-    }
 }
