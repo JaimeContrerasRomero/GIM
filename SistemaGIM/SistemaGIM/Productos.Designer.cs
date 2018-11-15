@@ -35,8 +35,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsetar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.pnlRegistros = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -72,7 +70,7 @@
             this.pnlBotones.Location = new System.Drawing.Point(0, 0);
             this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(800, 64);
+            this.pnlBotones.Size = new System.Drawing.Size(830, 64);
             this.pnlBotones.TabIndex = 2;
             // 
             // btnReporte
@@ -115,43 +113,21 @@
             this.btnInsetar.TabIndex = 0;
             this.btnInsetar.UseVisualStyleBackColor = true;
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(973, 92);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 66);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(888, 92);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(77, 66);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
             // pnlRegistros
             // 
             this.pnlRegistros.Controls.Add(this.button1);
             this.pnlRegistros.Controls.Add(this.button2);
-            this.pnlRegistros.Controls.Add(this.btnCancelar);
-            this.pnlRegistros.Controls.Add(this.btnGuardar);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 276);
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 316);
             this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(800, 174);
+            this.pnlRegistros.Size = new System.Drawing.Size(830, 104);
             this.pnlRegistros.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(709, 95);
+            this.button1.Location = new System.Drawing.Point(740, 25);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 66);
@@ -161,7 +137,7 @@
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(624, 95);
+            this.button2.Location = new System.Drawing.Point(655, 25);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 66);
@@ -176,7 +152,7 @@
             this.pnlDatos.Location = new System.Drawing.Point(0, 64);
             this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(800, 212);
+            this.pnlDatos.Size = new System.Drawing.Size(830, 252);
             this.pnlDatos.TabIndex = 4;
             // 
             // gvDatos
@@ -190,7 +166,7 @@
             this.gvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gvDatos.Name = "gvDatos";
             this.gvDatos.ReadOnly = true;
-            this.gvDatos.Size = new System.Drawing.Size(800, 185);
+            this.gvDatos.Size = new System.Drawing.Size(830, 225);
             this.gvDatos.TabIndex = 1;
             // 
             // bindingNavigator1
@@ -218,7 +194,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(830, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -311,7 +287,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(830, 420);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
@@ -337,8 +313,6 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnInsetar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Panel pnlRegistros;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
