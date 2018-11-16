@@ -58,5 +58,11 @@ namespace SistemaGIM
             Proveedores prov = new Proveedores();
             prov.ShowDialog();
         }
+
+        private void btnBitacora_Click(object sender, EventArgs e)
+        {
+            Bitacoras bita = new Bitacoras();
+            bita.ShowDialog();
+        }
     }
 }
