@@ -70,5 +70,11 @@ namespace SistemaGIM
             Productos pr = new Productos();
             pr.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Membresias m = new Membresias();
+            m.ShowDialog();
+        }
     }
 }
