@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1161, 63);
             this.panel1.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
             this.btnCerrarSesion.Location = new System.Drawing.Point(1100, 4);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(57, 53);
             this.btnCerrarSesion.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 63);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1161, 509);
@@ -102,9 +102,9 @@
             this.tabPage1.Controls.Add(this.btnBitacora);
             this.tabPage1.Controls.Add(this.btnBoceto);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1153, 480);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Catalogos";
@@ -114,7 +114,7 @@
             // 
             this.btnBitacora.Image = ((System.Drawing.Image)(resources.GetObject("btnBitacora.Image")));
             this.btnBitacora.Location = new System.Drawing.Point(183, 38);
-            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBitacora.Margin = new System.Windows.Forms.Padding(4);
             this.btnBitacora.Name = "btnBitacora";
             this.btnBitacora.Size = new System.Drawing.Size(100, 84);
             this.btnBitacora.TabIndex = 1;
@@ -128,7 +128,7 @@
             this.btnBoceto.Image = ((System.Drawing.Image)(resources.GetObject("btnBoceto.Image")));
             this.btnBoceto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnBoceto.Location = new System.Drawing.Point(41, 38);
-            this.btnBoceto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBoceto.Margin = new System.Windows.Forms.Padding(4);
             this.btnBoceto.Name = "btnBoceto";
             this.btnBoceto.Size = new System.Drawing.Size(100, 84);
             this.btnBoceto.TabIndex = 0;
@@ -146,10 +146,10 @@
             this.tabPage2.Controls.Add(this.btnProductos);
             this.tabPage2.Controls.Add(this.btnCompra);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1153, 481);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage2.Size = new System.Drawing.Size(1153, 480);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modulos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             this.btnSociosAsistencias.Image = ((System.Drawing.Image)(resources.GetObject("btnSociosAsistencias.Image")));
             this.btnSociosAsistencias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSociosAsistencias.Location = new System.Drawing.Point(664, 37);
-            this.btnSociosAsistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSociosAsistencias.Margin = new System.Windows.Forms.Padding(4);
             this.btnSociosAsistencias.Name = "btnSociosAsistencias";
             this.btnSociosAsistencias.Size = new System.Drawing.Size(100, 84);
             this.btnSociosAsistencias.TabIndex = 6;
@@ -172,7 +172,7 @@
             this.btn_inventario.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventario.Image")));
             this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_inventario.Location = new System.Drawing.Point(556, 37);
-            this.btn_inventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_inventario.Margin = new System.Windows.Forms.Padding(4);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(100, 84);
             this.btn_inventario.TabIndex = 5;
@@ -186,7 +186,7 @@
             this.btnProveedores.Image = global::SistemaGIM.Properties.Resources.proveedores;
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProveedores.Location = new System.Drawing.Point(435, 37);
-            this.btnProveedores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProveedores.Margin = new System.Windows.Forms.Padding(4);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(100, 84);
             this.btnProveedores.TabIndex = 4;
@@ -200,7 +200,7 @@
             this.btn_productos.Image = ((System.Drawing.Image)(resources.GetObject("btn_productos.Image")));
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_productos.Location = new System.Drawing.Point(297, 37);
-            this.btn_productos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_productos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(100, 84);
             this.btn_productos.TabIndex = 3;
@@ -214,20 +214,21 @@
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProductos.Location = new System.Drawing.Point(163, 37);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(100, 84);
             this.btnProductos.TabIndex = 2;
             this.btnProductos.Text = "&Productos";
             this.btnProductos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnProductos.UseVisualStyleBackColor = true;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
             // 
             // btnCompra
             // 
             this.btnCompra.Image = ((System.Drawing.Image)(resources.GetObject("btnCompra.Image")));
             this.btnCompra.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnCompra.Location = new System.Drawing.Point(40, 37);
-            this.btnCompra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompra.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(100, 84);
             this.btnCompra.TabIndex = 1;
@@ -243,7 +244,7 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
