@@ -255,6 +255,7 @@
     <Content Include="icons\shopping-icon.png" />
     <Content Include="icons\socio.png" />
     <Content Include="icons\SociosAsistencias.png" />
+    <None Include="Resources\socio.png" />
     <None Include="Resources\document-icon.png" />
   </ItemGroup>
   <ItemGroup>

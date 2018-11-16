@@ -82,5 +82,11 @@ namespace SistemaGIM
             SociosAsistencias sa = new SociosAsistencias();
             sa.ShowDialog();
         }
+
+        private void btn_Socios_Click(object sender, EventArgs e)
+        {
+            socios so = new socios();
+            so.ShowDialog();
+        }
     }
 }

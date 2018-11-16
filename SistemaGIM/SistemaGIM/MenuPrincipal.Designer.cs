@@ -37,6 +37,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
+            this.btn_Socios = new System.Windows.Forms.Button();
             this.btn_SociosMembresias = new System.Windows.Forms.Button();
             this.btnSociosAsistencias = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
@@ -100,6 +101,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btn_Socios);
             this.tabPage2.Controls.Add(this.btn_SociosMembresias);
             this.tabPage2.Controls.Add(this.btnSociosAsistencias);
             this.tabPage2.Controls.Add(this.btn_inventario);
@@ -151,6 +153,19 @@
             this.btnBoceto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
+            // 
+            // btn_Socios
+            // 
+            this.btn_Socios.Image = global::SistemaGIM.Properties.Resources.socio;
+            this.btn_Socios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_Socios.Location = new System.Drawing.Point(669, 30);
+            this.btn_Socios.Name = "btn_Socios";
+            this.btn_Socios.Size = new System.Drawing.Size(75, 68);
+            this.btn_Socios.TabIndex = 8;
+            this.btn_Socios.Text = "&Socios";
+            this.btn_Socios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_Socios.UseVisualStyleBackColor = true;
+            this.btn_Socios.Click += new System.EventHandler(this.btn_Socios_Click);
             // 
             // btn_SociosMembresias
             // 
@@ -292,5 +307,6 @@
         private System.Windows.Forms.Button btnSociosAsistencias;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_SociosMembresias;
+        private System.Windows.Forms.Button btn_Socios;
     }
 }

@@ -11,10 +11,60 @@ using System.Windows.Forms;
 namespace SistemaGIM
 {
     public partial class socios : Form
+    
     {
+        string estado = "";
         public socios()
         {
             InitializeComponent();
+        }
+
+        private void btnInsetar_Click(object sender, EventArgs e)
+        {
+            pnlBotones.Enabled = false;
+            pnlRegistros.Enabled = true;
+            estado = "insertar";
+        }
+
+        private void socios_Load(object sender, EventArgs e)
+        {
+            pnlRegistros.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            pnlBotones.Enabled = false;
+            pnlRegistros.Enabled = true;
+            estado = "editar";
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            //eliminar se agregar despues de conectar la base de datos
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //boton guardar
+            if (estado == "insertar")
+            {
+
+
+            }
+            if (estado == "editar")
+            {
+
+
+            }
+            pnlBotones.Enabled = true;
+            pnlRegistros.Enabled = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //boton cancelar
+            pnlBotones.Enabled = true;
+            pnlRegistros.Enabled = false;
         }
     }
 }
