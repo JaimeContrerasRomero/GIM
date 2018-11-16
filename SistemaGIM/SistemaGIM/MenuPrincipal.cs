@@ -52,5 +52,11 @@ namespace SistemaGIM
             Inventarios inv = new Inventarios();
             inv.ShowDialog();
         }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            Proveedores prov = new Proveedores();
+            prov.ShowDialog();
+        }
     }
 }
