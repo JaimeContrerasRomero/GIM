@@ -94,6 +94,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(56, 53);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -104,6 +105,7 @@
             this.btnEditar.Size = new System.Drawing.Size(56, 53);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInsetar
             // 
@@ -114,6 +116,7 @@
             this.btnInsetar.Size = new System.Drawing.Size(56, 53);
             this.btnInsetar.TabIndex = 0;
             this.btnInsetar.UseVisualStyleBackColor = true;
+            this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
             // 
             // pnlRegistros
             // 
@@ -135,6 +138,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(77, 66);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -145,6 +149,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(77, 66);
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // pnlDatos
             // 
@@ -296,6 +301,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Inventarios";
             this.Text = "Inventarios";
+            this.Load += new System.EventHandler(this.Inventarios_Load);
             this.pnlBotones.ResumeLayout(false);
             this.pnlRegistros.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);
