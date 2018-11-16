@@ -30,20 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btn_SociosMembresias = new System.Windows.Forms.Button();
             this.btnSociosAsistencias = new System.Windows.Forms.Button();
             this.btn_inventario = new System.Windows.Forms.Button();
             this.btnProveedores = new System.Windows.Forms.Button();
             this.btn_productos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -59,16 +60,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 51);
             this.panel1.TabIndex = 0;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // lblUsuario
             // 
@@ -107,6 +98,23 @@
             this.tabPage1.Text = "Catalogos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btn_SociosMembresias);
+            this.tabPage2.Controls.Add(this.btnSociosAsistencias);
+            this.tabPage2.Controls.Add(this.btn_inventario);
+            this.tabPage2.Controls.Add(this.btnProveedores);
+            this.tabPage2.Controls.Add(this.btn_productos);
+            this.tabPage2.Controls.Add(this.btnProductos);
+            this.tabPage2.Controls.Add(this.btnCompra);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(863, 388);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Modulos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -144,21 +152,17 @@
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
             // 
-            // tabPage2
+            // btn_SociosMembresias
             // 
-            this.tabPage2.Controls.Add(this.btnSociosAsistencias);
-            this.tabPage2.Controls.Add(this.btn_inventario);
-            this.tabPage2.Controls.Add(this.btnProveedores);
-            this.tabPage2.Controls.Add(this.btn_productos);
-            this.tabPage2.Controls.Add(this.btnProductos);
-            this.tabPage2.Controls.Add(this.btnCompra);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modulos";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.btn_SociosMembresias.Image = global::SistemaGIM.Properties.Resources.document_icon;
+            this.btn_SociosMembresias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_SociosMembresias.Location = new System.Drawing.Point(588, 30);
+            this.btn_SociosMembresias.Name = "btn_SociosMembresias";
+            this.btn_SociosMembresias.Size = new System.Drawing.Size(75, 68);
+            this.btn_SociosMembresias.TabIndex = 7;
+            this.btn_SociosMembresias.Text = "&SociosMembresias";
+            this.btn_SociosMembresias.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_SociosMembresias.UseVisualStyleBackColor = true;
             // 
             // btnSociosAsistencias
             // 
@@ -237,6 +241,16 @@
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,5 +291,6 @@
         private System.Windows.Forms.Button btn_inventario;
         private System.Windows.Forms.Button btnSociosAsistencias;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_SociosMembresias;
     }
 }
