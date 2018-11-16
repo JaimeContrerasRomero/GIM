@@ -46,5 +46,11 @@ namespace SistemaGIM
             SocioPesos sp = new SocioPesos();
             sp.ShowDialog();
         }
+
+        private void btn_inventario_Click(object sender, EventArgs e)
+        {
+            Inventarios inv = new Inventarios();
+            inv.ShowDialog();
+        }
     }
 }
