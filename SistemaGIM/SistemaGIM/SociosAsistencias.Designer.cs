@@ -89,6 +89,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(42, 43);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -98,6 +99,7 @@
             this.btnEditar.Size = new System.Drawing.Size(42, 43);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInsetar
             // 
@@ -107,6 +109,7 @@
             this.btnInsetar.Size = new System.Drawing.Size(42, 43);
             this.btnInsetar.TabIndex = 0;
             this.btnInsetar.UseVisualStyleBackColor = true;
+            this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
             // 
             // pnlRegistros
             // 
@@ -126,6 +129,7 @@
             this.button1.Size = new System.Drawing.Size(58, 54);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -135,6 +139,7 @@
             this.button2.Size = new System.Drawing.Size(58, 54);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pnlDatos
             // 
@@ -283,6 +288,7 @@
             this.Controls.Add(this.pnlBotones);
             this.Name = "SociosAsistencias";
             this.Text = "SociosAsistencias";
+            this.Load += new System.EventHandler(this.SociosAsistencias_Load);
             this.pnlBotones.ResumeLayout(false);
             this.pnlRegistros.ResumeLayout(false);
             this.pnlDatos.ResumeLayout(false);

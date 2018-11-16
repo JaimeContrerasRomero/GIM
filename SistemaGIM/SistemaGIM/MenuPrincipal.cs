@@ -76,5 +76,11 @@ namespace SistemaGIM
             Membresias m = new Membresias();
             m.ShowDialog();
         }
+
+        private void btnSociosAsistencias_Click(object sender, EventArgs e)
+        {
+            SociosAsistencias sa = new SociosAsistencias();
+            sa.ShowDialog();
+        }
     }
 }
