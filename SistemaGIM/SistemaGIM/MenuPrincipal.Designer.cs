@@ -99,7 +99,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnUsuarios);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnBitacora);
             this.tabPage1.Controls.Add(this.btnBoceto);
@@ -150,6 +149,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnUsuarios);
             this.tabPage2.Controls.Add(this.btn_Socios);
             this.tabPage2.Controls.Add(this.btn_SociosMembresias);
             this.tabPage2.Controls.Add(this.btnSociosAsistencias);
@@ -271,10 +271,10 @@
             // btnUsuarios
             // 
             this.btnUsuarios.Image = global::SistemaGIM.Properties.Resources.proveedores;
-            this.btnUsuarios.Location = new System.Drawing.Point(274, 31);
+            this.btnUsuarios.Location = new System.Drawing.Point(678, 30);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(75, 68);
-            this.btnUsuarios.TabIndex = 3;
+            this.btnUsuarios.TabIndex = 9;
             this.btnUsuarios.Text = "&Usuarios";
             this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnUsuarios.UseVisualStyleBackColor = true;

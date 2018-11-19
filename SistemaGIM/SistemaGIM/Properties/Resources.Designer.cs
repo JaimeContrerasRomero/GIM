@@ -63,6 +63,16 @@ namespace SistemaGIM.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_photo {
+            get {
+                object obj = ResourceManager.GetObject("add-photo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap document_icon {
             get {
                 object obj = ResourceManager.GetObject("document-icon", resourceCulture);

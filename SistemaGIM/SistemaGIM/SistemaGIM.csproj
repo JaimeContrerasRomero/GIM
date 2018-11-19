@@ -160,6 +160,12 @@
     <Compile Include="SociosMembresias.Designer.cs">
       <DependentUpon>SociosMembresias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Bitacoras.resx">
       <DependentUpon>Bitacoras.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +218,9 @@
     <EmbeddedResource Include="SociosMembresias.resx">
       <DependentUpon>SociosMembresias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ds.xsc">
       <DependentUpon>ds.xsd</DependentUpon>
     </None>
@@ -255,6 +264,7 @@
     <Content Include="icons\shopping-icon.png" />
     <Content Include="icons\socio.png" />
     <Content Include="icons\SociosAsistencias.png" />
+    <None Include="Resources\add-photo.png" />
     <None Include="Resources\socio.png" />
     <None Include="Resources\document-icon.png" />
   </ItemGroup>
