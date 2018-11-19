@@ -52,12 +52,22 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsetar = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ds = new SistemaGIM.ds();
+            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bitacoraTableAdapter = new SistemaGIM.dsTableAdapters.BitacoraTableAdapter();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             this.pnlBotones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDatos
@@ -66,7 +76,7 @@
             this.pnlDatos.Controls.Add(this.bindingNavigator1);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatos.Location = new System.Drawing.Point(0, 64);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(1067, 316);
             this.pnlDatos.TabIndex = 5;
@@ -76,10 +86,18 @@
             this.gvDatos.AllowUserToAddRows = false;
             this.gvDatos.AllowUserToDeleteRows = false;
             this.gvDatos.AllowUserToOrderColumns = true;
+            this.gvDatos.AutoGenerateColumns = false;
             this.gvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idBitacoraDataGridViewTextBoxColumn,
+            this.idUsuarioDataGridViewTextBoxColumn,
+            this.accionDataGridViewTextBoxColumn,
+            this.tablaDataGridViewTextBoxColumn,
+            this.fechaHoraDataGridViewTextBoxColumn});
+            this.gvDatos.DataSource = this.bindingSource1;
             this.gvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvDatos.Location = new System.Drawing.Point(0, 27);
-            this.gvDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gvDatos.Name = "gvDatos";
             this.gvDatos.ReadOnly = true;
             this.gvDatos.Size = new System.Drawing.Size(1067, 289);
@@ -88,6 +106,7 @@
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.bindingSource1;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -205,7 +224,7 @@
             this.pnlRegistros.Controls.Add(this.btnGuardar);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlRegistros.Location = new System.Drawing.Point(0, 380);
-            this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistros.Name = "pnlRegistros";
             this.pnlRegistros.Size = new System.Drawing.Size(1067, 174);
             this.pnlRegistros.TabIndex = 4;
@@ -214,7 +233,7 @@
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(973, 92);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(77, 66);
             this.btnCancelar.TabIndex = 5;
@@ -225,7 +244,7 @@
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(888, 92);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(77, 66);
             this.btnGuardar.TabIndex = 4;
@@ -240,7 +259,7 @@
             this.pnlBotones.Controls.Add(this.btnInsetar);
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBotones.Location = new System.Drawing.Point(0, 0);
-            this.pnlBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBotones.Name = "pnlBotones";
             this.pnlBotones.Size = new System.Drawing.Size(1067, 64);
             this.pnlBotones.TabIndex = 3;
@@ -249,7 +268,7 @@
             // 
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
             this.btnReporte.Location = new System.Drawing.Point(208, 7);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(56, 53);
             this.btnReporte.TabIndex = 3;
@@ -259,7 +278,7 @@
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(144, 7);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(56, 53);
             this.btnEliminar.TabIndex = 2;
@@ -270,7 +289,7 @@
             // 
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.Location = new System.Drawing.Point(80, 7);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(56, 53);
             this.btnEditar.TabIndex = 1;
@@ -281,12 +300,61 @@
             // 
             this.btnInsetar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsetar.Image")));
             this.btnInsetar.Location = new System.Drawing.Point(16, 7);
-            this.btnInsetar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnInsetar.Margin = new System.Windows.Forms.Padding(4);
             this.btnInsetar.Name = "btnInsetar";
             this.btnInsetar.Size = new System.Drawing.Size(56, 53);
             this.btnInsetar.TabIndex = 0;
             this.btnInsetar.UseVisualStyleBackColor = true;
             this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Bitacora";
+            this.bindingSource1.DataSource = this.ds;
+            // 
+            // ds
+            // 
+            this.ds.DataSetName = "ds";
+            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // idBitacoraDataGridViewTextBoxColumn
+            // 
+            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
+            this.idBitacoraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accionDataGridViewTextBoxColumn
+            // 
+            this.accionDataGridViewTextBoxColumn.DataPropertyName = "Accion";
+            this.accionDataGridViewTextBoxColumn.HeaderText = "Accion";
+            this.accionDataGridViewTextBoxColumn.Name = "accionDataGridViewTextBoxColumn";
+            this.accionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tablaDataGridViewTextBoxColumn
+            // 
+            this.tablaDataGridViewTextBoxColumn.DataPropertyName = "Tabla";
+            this.tablaDataGridViewTextBoxColumn.HeaderText = "Tabla";
+            this.tablaDataGridViewTextBoxColumn.Name = "tablaDataGridViewTextBoxColumn";
+            this.tablaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaHoraDataGridViewTextBoxColumn
+            // 
+            this.fechaHoraDataGridViewTextBoxColumn.DataPropertyName = "FechaHora";
+            this.fechaHoraDataGridViewTextBoxColumn.HeaderText = "FechaHora";
+            this.fechaHoraDataGridViewTextBoxColumn.Name = "fechaHoraDataGridViewTextBoxColumn";
+            this.fechaHoraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bitacoraTableAdapter
+            // 
+            this.bitacoraTableAdapter.ClearBeforeFill = true;
             // 
             // Bitacoras
             // 
@@ -308,6 +376,8 @@
             this.bindingNavigator1.PerformLayout();
             this.pnlRegistros.ResumeLayout(false);
             this.pnlBotones.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,5 +406,13 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnInsetar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBitacoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tablaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private ds ds;
+        private dsTableAdapters.BitacoraTableAdapter bitacoraTableAdapter;
     }
 }
