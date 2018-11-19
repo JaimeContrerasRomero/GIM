@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_Socios = new System.Windows.Forms.Button();
             this.btn_SociosMembresias = new System.Windows.Forms.Button();
             this.btnSociosAsistencias = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.btn_productos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
-            this.btnCerrarSesion = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -61,6 +62,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(871, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
+            this.btnCerrarSesion.TabIndex = 1;
+            this.btnCerrarSesion.UseVisualStyleBackColor = true;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // lblUsuario
             // 
@@ -88,6 +99,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnUsuarios);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnBitacora);
             this.tabPage1.Controls.Add(this.btnBoceto);
@@ -99,28 +111,10 @@
             this.tabPage1.Text = "Catalogos";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btn_Socios);
-            this.tabPage2.Controls.Add(this.btn_SociosMembresias);
-            this.tabPage2.Controls.Add(this.btnSociosAsistencias);
-            this.tabPage2.Controls.Add(this.btn_inventario);
-            this.tabPage2.Controls.Add(this.btnProveedores);
-            this.tabPage2.Controls.Add(this.btn_productos);
-            this.tabPage2.Controls.Add(this.btnProductos);
-            this.tabPage2.Controls.Add(this.btnCompra);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(863, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Modulos";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(244, 31);
+            this.button1.Location = new System.Drawing.Point(193, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 68);
             this.button1.TabIndex = 2;
@@ -132,7 +126,7 @@
             // btnBitacora
             // 
             this.btnBitacora.Image = ((System.Drawing.Image)(resources.GetObject("btnBitacora.Image")));
-            this.btnBitacora.Location = new System.Drawing.Point(137, 31);
+            this.btnBitacora.Location = new System.Drawing.Point(112, 31);
             this.btnBitacora.Name = "btnBitacora";
             this.btnBitacora.Size = new System.Drawing.Size(75, 68);
             this.btnBitacora.TabIndex = 1;
@@ -154,11 +148,29 @@
             this.btnBoceto.UseVisualStyleBackColor = true;
             this.btnBoceto.Click += new System.EventHandler(this.btnBoceto_Click);
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btn_Socios);
+            this.tabPage2.Controls.Add(this.btn_SociosMembresias);
+            this.tabPage2.Controls.Add(this.btnSociosAsistencias);
+            this.tabPage2.Controls.Add(this.btn_inventario);
+            this.tabPage2.Controls.Add(this.btnProveedores);
+            this.tabPage2.Controls.Add(this.btn_productos);
+            this.tabPage2.Controls.Add(this.btnProductos);
+            this.tabPage2.Controls.Add(this.btnCompra);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(863, 388);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Modulos";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // btn_Socios
             // 
             this.btn_Socios.Image = global::SistemaGIM.Properties.Resources.socio;
             this.btn_Socios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_Socios.Location = new System.Drawing.Point(669, 30);
+            this.btn_Socios.Location = new System.Drawing.Point(597, 30);
             this.btn_Socios.Name = "btn_Socios";
             this.btn_Socios.Size = new System.Drawing.Size(75, 68);
             this.btn_Socios.TabIndex = 8;
@@ -171,7 +183,7 @@
             // 
             this.btn_SociosMembresias.Image = global::SistemaGIM.Properties.Resources.document_icon;
             this.btn_SociosMembresias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_SociosMembresias.Location = new System.Drawing.Point(588, 30);
+            this.btn_SociosMembresias.Location = new System.Drawing.Point(516, 30);
             this.btn_SociosMembresias.Name = "btn_SociosMembresias";
             this.btn_SociosMembresias.Size = new System.Drawing.Size(75, 68);
             this.btn_SociosMembresias.TabIndex = 7;
@@ -183,7 +195,7 @@
             // 
             this.btnSociosAsistencias.Image = ((System.Drawing.Image)(resources.GetObject("btnSociosAsistencias.Image")));
             this.btnSociosAsistencias.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSociosAsistencias.Location = new System.Drawing.Point(498, 30);
+            this.btnSociosAsistencias.Location = new System.Drawing.Point(435, 30);
             this.btnSociosAsistencias.Name = "btnSociosAsistencias";
             this.btnSociosAsistencias.Size = new System.Drawing.Size(75, 68);
             this.btnSociosAsistencias.TabIndex = 6;
@@ -196,7 +208,7 @@
             // 
             this.btn_inventario.Image = ((System.Drawing.Image)(resources.GetObject("btn_inventario.Image")));
             this.btn_inventario.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_inventario.Location = new System.Drawing.Point(417, 30);
+            this.btn_inventario.Location = new System.Drawing.Point(354, 30);
             this.btn_inventario.Name = "btn_inventario";
             this.btn_inventario.Size = new System.Drawing.Size(75, 68);
             this.btn_inventario.TabIndex = 5;
@@ -209,7 +221,7 @@
             // 
             this.btnProveedores.Image = global::SistemaGIM.Properties.Resources.proveedores;
             this.btnProveedores.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProveedores.Location = new System.Drawing.Point(326, 30);
+            this.btnProveedores.Location = new System.Drawing.Point(273, 30);
             this.btnProveedores.Name = "btnProveedores";
             this.btnProveedores.Size = new System.Drawing.Size(75, 68);
             this.btnProveedores.TabIndex = 4;
@@ -222,7 +234,7 @@
             // 
             this.btn_productos.Image = ((System.Drawing.Image)(resources.GetObject("btn_productos.Image")));
             this.btn_productos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_productos.Location = new System.Drawing.Point(223, 30);
+            this.btn_productos.Location = new System.Drawing.Point(192, 30);
             this.btn_productos.Name = "btn_productos";
             this.btn_productos.Size = new System.Drawing.Size(75, 68);
             this.btn_productos.TabIndex = 3;
@@ -235,7 +247,7 @@
             // 
             this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
             this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProductos.Location = new System.Drawing.Point(122, 30);
+            this.btnProductos.Location = new System.Drawing.Point(111, 30);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(75, 68);
             this.btnProductos.TabIndex = 2;
@@ -256,15 +268,16 @@
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
-            // btnCerrarSesion
+            // btnUsuarios
             // 
-            this.btnCerrarSesion.Image = global::SistemaGIM.Properties.Resources.eliminar;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(825, 3);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(43, 43);
-            this.btnCerrarSesion.TabIndex = 1;
-            this.btnCerrarSesion.UseVisualStyleBackColor = true;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            this.btnUsuarios.Image = global::SistemaGIM.Properties.Resources.proveedores;
+            this.btnUsuarios.Location = new System.Drawing.Point(274, 31);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(75, 68);
+            this.btnUsuarios.TabIndex = 3;
+            this.btnUsuarios.Text = "&Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
@@ -308,5 +321,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btn_SociosMembresias;
         private System.Windows.Forms.Button btn_Socios;
+        private System.Windows.Forms.Button btnUsuarios;
     }
 }
