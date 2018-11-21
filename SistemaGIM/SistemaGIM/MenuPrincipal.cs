@@ -88,5 +88,11 @@ namespace SistemaGIM
             socios so = new socios();
             so.ShowDialog();
         }
+
+        private void btnEquipo_Click(object sender, EventArgs e)
+        {
+            Equipos eq = new Equipos();
+           eq.ShowDialog();
+        }
     }
 }

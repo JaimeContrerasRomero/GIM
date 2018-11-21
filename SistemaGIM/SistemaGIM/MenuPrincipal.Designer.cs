@@ -38,6 +38,7 @@
             this.btnBitacora = new System.Windows.Forms.Button();
             this.btnBoceto = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.btn_Socios = new System.Windows.Forms.Button();
             this.btn_SociosMembresias = new System.Windows.Forms.Button();
             this.btnSociosAsistencias = new System.Windows.Forms.Button();
@@ -46,7 +47,7 @@
             this.btn_productos = new System.Windows.Forms.Button();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnCompra = new System.Windows.Forms.Button();
-            this.btnUsuarios = new System.Windows.Forms.Button();
+            this.btnEquipo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -149,6 +150,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnEquipo);
             this.tabPage2.Controls.Add(this.btnUsuarios);
             this.tabPage2.Controls.Add(this.btn_Socios);
             this.tabPage2.Controls.Add(this.btn_SociosMembresias);
@@ -165,6 +167,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Modulos";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.Image = global::SistemaGIM.Properties.Resources.proveedores;
+            this.btnUsuarios.Location = new System.Drawing.Point(678, 30);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(75, 68);
+            this.btnUsuarios.TabIndex = 9;
+            this.btnUsuarios.Text = "&Usuarios";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
             // 
             // btn_Socios
             // 
@@ -268,16 +281,18 @@
             this.btnCompra.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCompra.UseVisualStyleBackColor = true;
             // 
-            // btnUsuarios
+            // btnEquipo
             // 
-            this.btnUsuarios.Image = global::SistemaGIM.Properties.Resources.proveedores;
-            this.btnUsuarios.Location = new System.Drawing.Point(678, 30);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(75, 68);
-            this.btnUsuarios.TabIndex = 9;
-            this.btnUsuarios.Text = "&Usuarios";
-            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnEquipo.Image = global::SistemaGIM.Properties.Resources.pesa;
+            this.btnEquipo.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEquipo.Location = new System.Drawing.Point(759, 30);
+            this.btnEquipo.Name = "btnEquipo";
+            this.btnEquipo.Size = new System.Drawing.Size(75, 68);
+            this.btnEquipo.TabIndex = 10;
+            this.btnEquipo.Text = "Equipos";
+            this.btnEquipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEquipo.UseVisualStyleBackColor = true;
+            this.btnEquipo.Click += new System.EventHandler(this.btnEquipo_Click);
             // 
             // MenuPrincipal
             // 
@@ -322,5 +337,6 @@
         private System.Windows.Forms.Button btn_SociosMembresias;
         private System.Windows.Forms.Button btn_Socios;
         private System.Windows.Forms.Button btnUsuarios;
+        private System.Windows.Forms.Button btnEquipo;
     }
 }
