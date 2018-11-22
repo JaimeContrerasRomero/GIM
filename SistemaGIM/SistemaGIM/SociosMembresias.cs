@@ -67,5 +67,10 @@ namespace SistemaGIM
         {
             pnlRegistros.Enabled = false;
         }
+
+        private void gvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
