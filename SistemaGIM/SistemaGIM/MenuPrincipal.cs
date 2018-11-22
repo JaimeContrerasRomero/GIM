@@ -94,5 +94,11 @@ namespace SistemaGIM
             Equipos eq = new Equipos();
            eq.ShowDialog();
         }
+
+        private void btn_SociosMembresias_Click(object sender, EventArgs e)
+        {
+            SociosMembresias sm = new SociosMembresias();
+            sm.ShowDialog();
+        }
     }
 }
