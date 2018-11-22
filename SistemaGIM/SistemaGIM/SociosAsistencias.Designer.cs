@@ -52,12 +52,30 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ds = new SistemaGIM.ds();
+            this.socioAsistenciaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.socioAsistenciaTableAdapter = new SistemaGIM.dsTableAdapters.SocioAsistenciaTableAdapter();
+            this.idSocioAsistenciaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idSocioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNacimientoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codigoBarrasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaIngresoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaEntradaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaSalidaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBotones.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socioAsistenciaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotones
@@ -69,7 +87,7 @@
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBotones.Location = new System.Drawing.Point(0, 0);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(813, 52);
+            this.pnlBotones.Size = new System.Drawing.Size(932, 52);
             this.pnlBotones.TabIndex = 3;
             // 
             // btnReporte
@@ -116,9 +134,9 @@
             this.pnlRegistros.Controls.Add(this.button1);
             this.pnlRegistros.Controls.Add(this.button2);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 263);
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 278);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(813, 141);
+            this.pnlRegistros.Size = new System.Drawing.Size(932, 141);
             this.pnlRegistros.TabIndex = 4;
             // 
             // button1
@@ -148,7 +166,7 @@
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatos.Location = new System.Drawing.Point(0, 52);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(813, 211);
+            this.pnlDatos.Size = new System.Drawing.Size(932, 226);
             this.pnlDatos.TabIndex = 5;
             // 
             // gvDatos
@@ -156,17 +174,34 @@
             this.gvDatos.AllowUserToAddRows = false;
             this.gvDatos.AllowUserToDeleteRows = false;
             this.gvDatos.AllowUserToOrderColumns = true;
+            this.gvDatos.AutoGenerateColumns = false;
             this.gvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idSocioAsistenciaDataGridViewTextBoxColumn,
+            this.idSocioDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.primerApellidoDataGridViewTextBoxColumn,
+            this.segundoApellidoDataGridViewTextBoxColumn,
+            this.fechaNacimientoDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.codigoBarrasDataGridViewTextBoxColumn,
+            this.fechaIngresoDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.horaEntradaDataGridViewTextBoxColumn,
+            this.horaSalidaDataGridViewTextBoxColumn,
+            this.activoDataGridViewTextBoxColumn});
+            this.gvDatos.DataSource = this.socioAsistenciaBindingSource;
             this.gvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvDatos.Location = new System.Drawing.Point(0, 27);
             this.gvDatos.Name = "gvDatos";
             this.gvDatos.ReadOnly = true;
-            this.gvDatos.Size = new System.Drawing.Size(813, 184);
+            this.gvDatos.Size = new System.Drawing.Size(932, 199);
             this.gvDatos.TabIndex = 1;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bindingNavigator1.BindingSource = this.socioAsistenciaBindingSource;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -189,7 +224,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(813, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(932, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -278,11 +313,116 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // ds
+            // 
+            this.ds.DataSetName = "ds";
+            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // socioAsistenciaBindingSource
+            // 
+            this.socioAsistenciaBindingSource.DataMember = "SocioAsistencia";
+            this.socioAsistenciaBindingSource.DataSource = this.ds;
+            // 
+            // socioAsistenciaTableAdapter
+            // 
+            this.socioAsistenciaTableAdapter.ClearBeforeFill = true;
+            // 
+            // idSocioAsistenciaDataGridViewTextBoxColumn
+            // 
+            this.idSocioAsistenciaDataGridViewTextBoxColumn.DataPropertyName = "IdSocioAsistencia";
+            this.idSocioAsistenciaDataGridViewTextBoxColumn.HeaderText = "IdSocioAsistencia";
+            this.idSocioAsistenciaDataGridViewTextBoxColumn.Name = "idSocioAsistenciaDataGridViewTextBoxColumn";
+            this.idSocioAsistenciaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idSocioDataGridViewTextBoxColumn
+            // 
+            this.idSocioDataGridViewTextBoxColumn.DataPropertyName = "IdSocio";
+            this.idSocioDataGridViewTextBoxColumn.HeaderText = "IdSocio";
+            this.idSocioDataGridViewTextBoxColumn.Name = "idSocioDataGridViewTextBoxColumn";
+            this.idSocioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // primerApellidoDataGridViewTextBoxColumn
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
+            this.primerApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
+            this.segundoApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaNacimientoDataGridViewTextBoxColumn
+            // 
+            this.fechaNacimientoDataGridViewTextBoxColumn.DataPropertyName = "FechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.HeaderText = "FechaNacimiento";
+            this.fechaNacimientoDataGridViewTextBoxColumn.Name = "fechaNacimientoDataGridViewTextBoxColumn";
+            this.fechaNacimientoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            this.telefonoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // codigoBarrasDataGridViewTextBoxColumn
+            // 
+            this.codigoBarrasDataGridViewTextBoxColumn.DataPropertyName = "CodigoBarras";
+            this.codigoBarrasDataGridViewTextBoxColumn.HeaderText = "CodigoBarras";
+            this.codigoBarrasDataGridViewTextBoxColumn.Name = "codigoBarrasDataGridViewTextBoxColumn";
+            this.codigoBarrasDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaIngresoDataGridViewTextBoxColumn
+            // 
+            this.fechaIngresoDataGridViewTextBoxColumn.DataPropertyName = "FechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.HeaderText = "FechaIngreso";
+            this.fechaIngresoDataGridViewTextBoxColumn.Name = "fechaIngresoDataGridViewTextBoxColumn";
+            this.fechaIngresoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            this.fechaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horaEntradaDataGridViewTextBoxColumn
+            // 
+            this.horaEntradaDataGridViewTextBoxColumn.DataPropertyName = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.HeaderText = "HoraEntrada";
+            this.horaEntradaDataGridViewTextBoxColumn.Name = "horaEntradaDataGridViewTextBoxColumn";
+            this.horaEntradaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // horaSalidaDataGridViewTextBoxColumn
+            // 
+            this.horaSalidaDataGridViewTextBoxColumn.DataPropertyName = "HoraSalida";
+            this.horaSalidaDataGridViewTextBoxColumn.HeaderText = "HoraSalida";
+            this.horaSalidaDataGridViewTextBoxColumn.Name = "horaSalidaDataGridViewTextBoxColumn";
+            this.horaSalidaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activoDataGridViewTextBoxColumn
+            // 
+            this.activoDataGridViewTextBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewTextBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
+            this.activoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // SociosAsistencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 404);
+            this.ClientSize = new System.Drawing.Size(932, 419);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
@@ -297,6 +437,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.socioAsistenciaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -325,5 +467,21 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSocioAsistenciaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idSocioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimientoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarrasDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaIngresoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaEntradaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn horaSalidaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource socioAsistenciaBindingSource;
+        private ds ds;
+        private dsTableAdapters.SocioAsistenciaTableAdapter socioAsistenciaTableAdapter;
     }
 }
