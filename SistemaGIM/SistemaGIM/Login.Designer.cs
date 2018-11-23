@@ -45,33 +45,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 87);
+            this.label1.Location = new System.Drawing.Point(17, 107);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(61, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(16, 104);
+            this.txtUsuario.Location = new System.Drawing.Point(21, 128);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(283, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(376, 22);
             this.txtUsuario.TabIndex = 2;
             // 
             // txtPasword
             // 
-            this.txtPasword.Location = new System.Drawing.Point(15, 144);
+            this.txtPasword.Location = new System.Drawing.Point(20, 177);
+            this.txtPasword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPasword.Name = "txtPasword";
-            this.txtPasword.Size = new System.Drawing.Size(283, 20);
+            this.txtPasword.Size = new System.Drawing.Size(376, 22);
             this.txtPasword.TabIndex = 4;
             this.txtPasword.UseSystemPasswordChar = true;
+            this.txtPasword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.enter);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Location = new System.Drawing.Point(16, 156);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(73, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password:";
             // 
@@ -79,9 +84,10 @@
             // 
             this.btnCerrar.Image = global::SistemaGIM.Properties.Resources.eliminar;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCerrar.Location = new System.Drawing.Point(164, 184);
+            this.btnCerrar.Location = new System.Drawing.Point(219, 226);
+            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(76, 54);
+            this.btnCerrar.Size = new System.Drawing.Size(101, 66);
             this.btnCerrar.TabIndex = 6;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -92,9 +98,10 @@
             // 
             this.btnAcceder.Image = global::SistemaGIM.Properties.Resources.login;
             this.btnAcceder.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAcceder.Location = new System.Drawing.Point(82, 184);
+            this.btnAcceder.Location = new System.Drawing.Point(109, 226);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(76, 54);
+            this.btnAcceder.Size = new System.Drawing.Size(101, 66);
             this.btnAcceder.TabIndex = 5;
             this.btnAcceder.Text = "Acceder";
             this.btnAcceder.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -104,7 +111,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SistemaGIM.Properties.Resources.pesa;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(176, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(64, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -117,9 +125,9 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 250);
+            this.ClientSize = new System.Drawing.Size(412, 298);
             this.ControlBox = false;
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAcceder);
@@ -129,10 +137,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(327, 289);
+            this.MaximumSize = new System.Drawing.Size(430, 345);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(327, 289);
+            this.MinimumSize = new System.Drawing.Size(430, 345);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -31,6 +31,11 @@ namespace SistemaGIM
 
         private void btnAcceder_Click(object sender, EventArgs e)
         {
+            this.ingreso();
+        }
+        public void ingreso()
+        {
+
             try
             {
                 if (this.ValidaCampos())
@@ -51,7 +56,7 @@ namespace SistemaGIM
                         mp.IdUsuario = this.IdUsuario;
                         mp.NombreCompleto = this.NombreCompleto;
                         mp.ShowDialog();
-                        
+
                         this.Close();
                     }
                     else
@@ -82,6 +87,14 @@ namespace SistemaGIM
             }
 
             return valida;
+        }
+
+        private void enter(object sender, KeyEventArgs e)
+        {
+            if ((int)e.KeyCode == (int)Keys.Enter)
+            {
+                this.ingreso();
+            }
         }
     }
 }
