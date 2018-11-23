@@ -13,6 +13,7 @@ namespace SistemaGIM
     public partial class Bitacoras : Form
     {
         string estado = "";
+        DataTable bitacora = new ds.BitacoraDataTable();
         public Bitacoras()
         {
             InitializeComponent();
@@ -21,13 +22,30 @@ namespace SistemaGIM
         private void Bitacoras_Load(object sender, EventArgs e)
         {
             pnlRegistros.Enabled = false;
+            this.actualizar();
+            
+            
+
+            
         }
+        public void actualizar() {
+            bitacoraTableAdapter.Fill(ds.Bitacora, null, null, "", "", "", null, "", null);
+            usuarioTableAdapter.Fill(ds.Usuario, null, null, null, null, null, null, null, null);
+        }
+
 
         private void btnInsetar_Click(object sender, EventArgs e)
         {
             pnlBotones.Enabled = false;
             pnlRegistros.Enabled = true;
             estado = "insertar";
+            panel_usuario.Enabled = true;
+
+            
+
+
+
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -35,25 +53,87 @@ namespace SistemaGIM
             pnlBotones.Enabled = false;
             pnlRegistros.Enabled = true;
             estado = "editar";
+            panel_bitacora.Enabled = true;
+            panel_usuario.Enabled = true;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //eliminar se agregar despues de conectar la base de datos
+
+            DialogResult resultado;
+            int seleccionado_bitacora = datagrid_bitacora.CurrentRow.Index;
+            resultado = MessageBox.Show("Se Eliminara el registro ", "¿Esta seguro?", MessageBoxButtons.YesNo);
+
+            if (resultado == System.Windows.Forms.DialogResult.Yes)
+            {
+                bitacoraTableAdapter.Delete((int)datagrid_bitacora.Rows[seleccionado_bitacora].Cells[0].Value);
+
+                //this.Close();
+
+            }
+            this.actualizar();
+
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (estado == "insertar")
-            {
+            int seleccionado = datagrid_usuario.CurrentRow.Index;
+            int seleccionado_bitacora = datagrid_bitacora.CurrentRow.Index;
 
+            string accion = (string)lbx_accion.SelectedItem;
+            int accion_int = 0; ;
+            if (accion == "insertar")
+            {
+                accion_int = 1;
 
             }
-            if (estado == "editar")
+            if (accion == "actualizar")
             {
-
+                accion_int = 2;
 
             }
+            if (accion == "eliminar")
+            {
+                accion_int = 3;
+
+            }
+            if (accion == "ingreso al sistema")
+            {
+                accion_int = 4;
+
+            }
+            try
+            {
+                if (estado == "insertar")
+                {
+
+
+
+
+                    bitacoraTableAdapter.Insert((int)datagrid_usuario.Rows[seleccionado].Cells[0].Value, Convert.ToInt16(accion_int), txb_tabla.Text, DateTime.Now);
+
+
+
+                }
+                if (estado == "editar")
+                {
+                    
+                    bitacoraTableAdapter.Update((int)datagrid_bitacora.Rows[seleccionado_bitacora].Cells[0].Value, (int)datagrid_usuario.Rows[seleccionado].Cells[0].Value, Convert.ToInt16(accion_int), txb_tabla.Text, DateTime.Now);
+
+                }
+            }
+            catch (Exception aa)
+            {
+
+                MessageBox.Show(aa.ToString());
+            }
+
+            
+            this.actualizar();
+            
+           
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
 
