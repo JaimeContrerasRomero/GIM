@@ -36,10 +36,19 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsetar = new System.Windows.Forms.Button();
             this.pnlRegistros = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txt_productos = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlDatos = new System.Windows.Forms.Panel();
             this.gvDatos = new System.Windows.Forms.DataGridView();
+            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ds = new SistemaGIM.ds();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -52,22 +61,21 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ds = new SistemaGIM.ds();
-            this.idProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productoTableAdapter = new SistemaGIM.dsTableAdapters.ProductoTableAdapter();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.num_producto = new System.Windows.Forms.NumericUpDown();
             this.pnlBotones.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
+            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_producto)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotones
@@ -80,7 +88,7 @@
             this.pnlBotones.Location = new System.Drawing.Point(0, 0);
             this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(830, 64);
+            this.pnlBotones.Size = new System.Drawing.Size(948, 64);
             this.pnlBotones.TabIndex = 2;
             // 
             // btnReporte
@@ -128,19 +136,42 @@
             // 
             // pnlRegistros
             // 
+            this.pnlRegistros.Controls.Add(this.num_producto);
+            this.pnlRegistros.Controls.Add(this.textBox1);
+            this.pnlRegistros.Controls.Add(this.label4);
+            this.pnlRegistros.Controls.Add(this.label3);
+            this.pnlRegistros.Controls.Add(this.label2);
+            this.pnlRegistros.Controls.Add(this.label1);
+            this.pnlRegistros.Controls.Add(this.txt_productos);
             this.pnlRegistros.Controls.Add(this.button1);
             this.pnlRegistros.Controls.Add(this.button2);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 316);
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 371);
             this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(830, 104);
+            this.pnlRegistros.Size = new System.Drawing.Size(948, 104);
             this.pnlRegistros.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(141, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Nombre del producto";
+            // 
+            // txt_productos
+            // 
+            this.txt_productos.Location = new System.Drawing.Point(162, 25);
+            this.txt_productos.Name = "txt_productos";
+            this.txt_productos.Size = new System.Drawing.Size(244, 22);
+            this.txt_productos.TabIndex = 8;
             // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(740, 25);
+            this.button1.Location = new System.Drawing.Point(857, 25);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 66);
@@ -151,7 +182,7 @@
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(655, 25);
+            this.button2.Location = new System.Drawing.Point(772, 25);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 66);
@@ -167,7 +198,7 @@
             this.pnlDatos.Location = new System.Drawing.Point(0, 64);
             this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(830, 252);
+            this.pnlDatos.Size = new System.Drawing.Size(948, 307);
             this.pnlDatos.TabIndex = 4;
             // 
             // gvDatos
@@ -189,8 +220,53 @@
             this.gvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gvDatos.Name = "gvDatos";
             this.gvDatos.ReadOnly = true;
-            this.gvDatos.Size = new System.Drawing.Size(830, 225);
+            this.gvDatos.Size = new System.Drawing.Size(948, 280);
             this.gvDatos.TabIndex = 1;
+            // 
+            // idProductoDataGridViewTextBoxColumn
+            // 
+            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "IdProducto";
+            this.idProductoDataGridViewTextBoxColumn.HeaderText = "IdProducto";
+            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
+            this.idProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activoDataGridViewTextBoxColumn
+            // 
+            this.activoDataGridViewTextBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewTextBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
+            this.activoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Producto";
+            this.bindingSource1.DataSource = this.ds;
+            // 
+            // ds
+            // 
+            this.ds.DataSetName = "ds";
+            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigator1
             // 
@@ -218,7 +294,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(830, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(948, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -307,60 +383,61 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Producto";
-            this.bindingSource1.DataSource = this.ds;
-            // 
-            // ds
-            // 
-            this.ds.DataSetName = "ds";
-            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // idProductoDataGridViewTextBoxColumn
-            // 
-            this.idProductoDataGridViewTextBoxColumn.DataPropertyName = "IdProducto";
-            this.idProductoDataGridViewTextBoxColumn.HeaderText = "IdProducto";
-            this.idProductoDataGridViewTextBoxColumn.Name = "idProductoDataGridViewTextBoxColumn";
-            this.idProductoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            this.descripcionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activoDataGridViewTextBoxColumn
-            // 
-            this.activoDataGridViewTextBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewTextBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
-            this.activoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // productoTableAdapter
             // 
             this.productoTableAdapter.ClearBeforeFill = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(71, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Descripcion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(420, 28);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Precio";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(447, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 17);
+            this.label4.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(162, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(244, 22);
+            this.textBox1.TabIndex = 13;
+            // 
+            // num_producto
+            // 
+            this.num_producto.Location = new System.Drawing.Point(474, 28);
+            this.num_producto.Maximum = new decimal(new int[] {
+            -1486618625,
+            232830643,
+            0,
+            0});
+            this.num_producto.Name = "num_producto";
+            this.num_producto.Size = new System.Drawing.Size(260, 22);
+            this.num_producto.TabIndex = 15;
+            this.num_producto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 420);
+            this.ClientSize = new System.Drawing.Size(948, 475);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
@@ -370,14 +447,16 @@
             this.Load += new System.EventHandler(this.Productos_Load);
             this.pnlBotones.ResumeLayout(false);
             this.pnlRegistros.ResumeLayout(false);
+            this.pnlRegistros.PerformLayout();
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_producto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -414,5 +493,12 @@
         private System.Windows.Forms.BindingSource bindingSource1;
         private ds ds;
         private dsTableAdapters.ProductoTableAdapter productoTableAdapter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_productos;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown num_producto;
     }
 }
