@@ -21,6 +21,7 @@ namespace SistemaGIM
         private void Proveedores_Load(object sender, EventArgs e)
         {
             pnlRegistros.Enabled = false;
+            
         }
 
         private void btnInsetar_Click(object sender, EventArgs e)
