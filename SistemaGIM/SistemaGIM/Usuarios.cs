@@ -32,7 +32,7 @@ namespace SistemaGIM
             this.tbNombre.Text = "";
             this.tbApellido1.Text = "";
             this.tbApellido2.Text = "";
-            this.tbUsuario.Focus();
+            this.tbEmail.Focus();
             this.EstadoForm = "Insertar";
         }
 

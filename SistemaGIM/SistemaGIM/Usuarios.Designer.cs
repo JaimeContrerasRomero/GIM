@@ -65,6 +65,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.BS1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ds = new SistemaGIM.ds();
+            this.UsuarioTA = new SistemaGIM.dsTableAdapters.UsuarioTableAdapter();
+            this.TAM1 = new SistemaGIM.dsTableAdapters.TableAdapterManager();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlBotones.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             this.pnlDatos.SuspendLayout();
@@ -72,6 +81,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BN1)).BeginInit();
             this.BN1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotones
@@ -198,7 +208,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(267, 18);
+            this.label3.Location = new System.Drawing.Point(141, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 16;
@@ -207,7 +217,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(141, 18);
+            this.label2.Location = new System.Drawing.Point(273, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 15;
@@ -218,9 +228,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Usuario";
+            this.label1.Text = "ID del Usuario";
             // 
             // tbApellido2
             // 
@@ -245,14 +255,14 @@
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(270, 34);
+            this.tbEmail.Location = new System.Drawing.Point(144, 34);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(123, 20);
             this.tbEmail.TabIndex = 10;
             // 
             // tbContraseña
             // 
-            this.tbContraseña.Location = new System.Drawing.Point(141, 34);
+            this.tbContraseña.Location = new System.Drawing.Point(273, 34);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.Size = new System.Drawing.Size(123, 20);
             this.tbContraseña.TabIndex = 9;
@@ -261,6 +271,7 @@
             // 
             this.tbUsuario.Location = new System.Drawing.Point(12, 34);
             this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.ReadOnly = true;
             this.tbUsuario.Size = new System.Drawing.Size(123, 20);
             this.tbUsuario.TabIndex = 8;
             // 
@@ -298,8 +309,16 @@
             // 
             this.gvDatos.AllowUserToAddRows = false;
             this.gvDatos.AllowUserToDeleteRows = false;
-            this.gvDatos.AllowUserToOrderColumns = true;
+            this.gvDatos.AutoGenerateColumns = false;
             this.gvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idUsuarioDataGridViewTextBoxColumn,
+            this.nombreDataGridViewTextBoxColumn,
+            this.primerApellidoDataGridViewTextBoxColumn,
+            this.segundoApellidoDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.passwordDataGridViewTextBoxColumn});
+            this.gvDatos.DataSource = this.BS1;
             this.gvDatos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvDatos.Location = new System.Drawing.Point(0, 27);
             this.gvDatos.Name = "gvDatos";
@@ -310,6 +329,7 @@
             // BN1
             // 
             this.BN1.AddNewItem = null;
+            this.BN1.BindingSource = this.BS1;
             this.BN1.CountItem = this.bindingNavigatorCountItem;
             this.BN1.DeleteItem = null;
             this.BN1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -401,6 +421,81 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
+            // BS1
+            // 
+            this.BS1.DataMember = "Usuario";
+            this.BS1.DataSource = this.ds;
+            // 
+            // ds
+            // 
+            this.ds.DataSetName = "ds";
+            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // UsuarioTA
+            // 
+            this.UsuarioTA.ClearBeforeFill = true;
+            // 
+            // TAM1
+            // 
+            this.TAM1.BackupDataSetBeforeUpdate = false;
+            this.TAM1.BitacoraTableAdapter = null;
+            this.TAM1.CompraDetalleTableAdapter = null;
+            this.TAM1.CompraTableAdapter = null;
+            this.TAM1.EquipoTableAdapter = null;
+            this.TAM1.InventarioTableAdapter = null;
+            this.TAM1.MembresiaTableAdapter = null;
+            this.TAM1.ProductoTableAdapter = null;
+            this.TAM1.ProveedorTableAdapter = null;
+            this.TAM1.SocioAsistenciaTableAdapter = null;
+            this.TAM1.SocioMembresiaTableAdapter = null;
+            this.TAM1.SocioPesoTableAdapter = null;
+            this.TAM1.SocioTableAdapter = null;
+            this.TAM1.UpdateOrder = SistemaGIM.dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.TAM1.UsuarioTableAdapter = this.UsuarioTA;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "ID del Usuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // primerApellidoDataGridViewTextBoxColumn
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "Primer Apellido";
+            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
+            this.primerApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "Segundo Apellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
+            this.segundoApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // GridUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,6 +505,7 @@
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
             this.Name = "GridUsuarios";
+            this.ShowIcon = false;
             this.Text = "Usuarios";
             this.pnlBotones.ResumeLayout(false);
             this.pnlRegistros.ResumeLayout(false);
@@ -421,6 +517,7 @@
             this.BN1.ResumeLayout(false);
             this.BN1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -448,7 +545,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.BindingSource BS1;
-        private System.Windows.Forms.TextBox tbUsuario;
         private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -462,5 +558,15 @@
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Button btnFoto;
         private System.Windows.Forms.Label label7;
+        private ds ds;
+        private dsTableAdapters.UsuarioTableAdapter UsuarioTA;
+        private dsTableAdapters.TableAdapterManager TAM1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox tbUsuario;
     }
 }
