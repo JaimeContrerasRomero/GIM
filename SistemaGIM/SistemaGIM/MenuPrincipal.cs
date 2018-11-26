@@ -100,5 +100,11 @@ namespace SistemaGIM
             SociosMembresias sm = new SociosMembresias();
             sm.ShowDialog();
         }
+
+        private void btnCompra_Click(object sender, EventArgs e)
+        {
+            Compras c = new Compras();
+            c.ShowDialog();
+        }
     }
 }
