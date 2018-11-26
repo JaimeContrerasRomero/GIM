@@ -35,5 +35,11 @@ namespace SistemaGIM
         {
             this.CargaMaestro();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repCompras rc = new repCompras();
+            rc.ShowDialog();
+        }
     }
 }
