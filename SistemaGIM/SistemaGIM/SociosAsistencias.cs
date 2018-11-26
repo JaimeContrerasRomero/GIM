@@ -67,23 +67,37 @@ namespace SistemaGIM
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int seleccionado = dataSocioAsistencia.CurrentRow.Index;
+            MessageBox.Show("si entra");
+
+            TimeSpan hora_entrada = new TimeSpan(Convert.ToInt32(txb_entrada_hora.Text), Convert.ToInt32(txb_entrada_minuto.Text), 0);
+            TimeSpan hora_salida = new TimeSpan(Convert.ToInt32(txb_salida_hora.Text), Convert.ToInt32(txb_salida_minuto.Text), 0);
+
             int seleccionado2 = dataSocio.CurrentRow.Index;
-            
             if (estado == "insertar")
             {
                 
-                
-              //  socioAsistenciaTableAdapter.Insert((int)dataSocio.Rows[seleccionado].Cells[0].Value,dt_fecha.Value,he_dateTimePicker,hs_dateTimePicker,1);
+                try
+                {
+                    
+                    socioAsistenciaTableAdapter.Insert((int)dataSocio.Rows[seleccionado2].Cells[0].Value, dt_fecha.Value, hora_entrada, hora_salida, 1);
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    throw;
+                }
+              
             }
             if (estado == "editar")
             {
-                //socioAsistenciaTableAdapter.Update((int)dataSocioAsistencia.Rows[seleccionado2].Cells[0].Value, (int)dataSocio.Rows[seleccionado].Cells[0].Value ,dt_fecha.Value, he_dateTimePicker, hs_dateTimePicker, 1);
+                int seleccionado = dataSocioAsistencia.CurrentRow.Index;
+                socioAsistenciaTableAdapter.Update((int)dataSocioAsistencia.Rows[seleccionado2].Cells[0].Value, (int)dataSocio.Rows[seleccionado].Cells[0].Value ,dt_fecha.Value, hora_entrada, hora_salida, 1);
 
             }
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
+            this.actualizar();
 
         }
 

@@ -80,7 +80,7 @@ namespace SistemaGIM
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             int seleccionado = datagrid_usuario.CurrentRow.Index;
-            int seleccionado_bitacora = datagrid_bitacora.CurrentRow.Index;
+            
 
             string accion = (string)lbx_accion.SelectedItem;
             int accion_int = 0; ;
@@ -119,7 +119,7 @@ namespace SistemaGIM
                 }
                 if (estado == "editar")
                 {
-                    
+                    int seleccionado_bitacora = datagrid_bitacora.CurrentRow.Index;
                     bitacoraTableAdapter.Update((int)datagrid_bitacora.Rows[seleccionado_bitacora].Cells[0].Value, (int)datagrid_usuario.Rows[seleccionado].Cells[0].Value, Convert.ToInt16(accion_int), txb_tabla.Text, DateTime.Now);
 
                 }
