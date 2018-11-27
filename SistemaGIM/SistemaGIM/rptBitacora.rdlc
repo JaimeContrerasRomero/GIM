@@ -437,8 +437,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!Accion.Value</Value>
-                              <Style />
+                              <Value>=IIf(Fields!Accion.Value=1,"Ingreso",IIf(Fields!Accion.Value=2,"Modifico",IIf(Fields!Accion.Value=3,"Elimino",IIf(Fields!Accion.Value=1,"Ingreso Al sistema",""))))</Value>
+                              <Style>
+                                <Format>E2</Format>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -515,7 +517,7 @@
         </TablixRowHierarchy>
         <DataSetName>rptDs</DataSetName>
         <Top>1.8542cm</Top>
-        <Height>1.34197cm</Height>
+        <Height>1.34196cm</Height>
         <Width>15.42411cm</Width>
         <ZIndex>1</ZIndex>
         <Style>

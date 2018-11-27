@@ -33,6 +33,34 @@ namespace SistemaGIM
         public void actualizar() {
             bitacoraTableAdapter.Fill(ds.Bitacora, null, null, "", "", "", null, "", null);
             usuarioTableAdapter.Fill(ds.Usuario, null, null, null, null, null, null, null, null);
+            correccir_datagrid();
+        }
+
+        public void correccir_datagrid()
+        {
+            for (int i = 0; i < datagrid_bitacora.Rows.Count; i++)
+            {
+                datagrid_bitacora.Rows[i].Cells[3].Value = datagrid_bitacora.Rows[i].Cells[7].Value + " " + datagrid_bitacora.Rows[i].Cells[8].Value + " " + datagrid_bitacora.Rows[i].Cells[9].Value;
+
+                if (Convert.ToInt32(datagrid_bitacora.Rows[i].Cells[2].Value) == 1)
+                {
+                    datagrid_bitacora.Rows[i].Cells[5].Value = "Inserto";
+                }
+
+                if (Convert.ToInt32(datagrid_bitacora.Rows[i].Cells[2].Value) == 2)
+                {
+                    datagrid_bitacora.Rows[i].Cells[5].Value = "Actualizo";
+                }
+                if (Convert.ToInt32(datagrid_bitacora.Rows[i].Cells[2].Value) == 3)
+                {
+                    datagrid_bitacora.Rows[i].Cells[5].Value = "Elimino";
+                }
+                if (Convert.ToInt32(datagrid_bitacora.Rows[i].Cells[2].Value) == 4)
+                {
+                    datagrid_bitacora.Rows[i].Cells[5].Value = "Ingreso Al Sistema";
+                }
+
+            }
         }
 
 

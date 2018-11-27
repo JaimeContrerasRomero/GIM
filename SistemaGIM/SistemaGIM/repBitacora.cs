@@ -21,7 +21,7 @@ namespace SistemaGIM
         {
             // TODO: esta línea de código carga datos en la tabla 'ds.Bitacora' Puede moverla o quitarla según sea necesario.
             this.BitacoraTableAdapter.Fill(this.ds.Bitacora,null,null,"","","",null,"",null);
-
+            
             this.rv_bitacora.RefreshReport();
         }
     }

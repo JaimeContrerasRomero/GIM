@@ -34,20 +34,10 @@
             this.panel_bitacora = new System.Windows.Forms.Panel();
             this.panel_usuario = new System.Windows.Forms.Panel();
             this.datagrid_usuario = new System.Windows.Forms.DataGridView();
-            this.idUsuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.binding_usuario = new System.Windows.Forms.BindingSource(this.components);
             this.ds = new SistemaGIM.ds();
             this.navi_usuario = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -58,22 +48,9 @@
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.panel2 = new System.Windows.Forms.Panel();
             this.datagrid_bitacora = new System.Windows.Forms.DataGridView();
-            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.binding_bitacora = new System.Windows.Forms.BindingSource(this.components);
             this.navi_bitacora = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -99,6 +76,27 @@
             this.bitacoraTableAdapter = new SistemaGIM.dsTableAdapters.BitacoraTableAdapter();
             this.usuarioTableAdapter = new SistemaGIM.dsTableAdapters.UsuarioTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.idUsuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.texto_accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos.SuspendLayout();
             this.panel_bitacora.SuspendLayout();
             this.panel_usuario.SuspendLayout();
@@ -152,6 +150,7 @@
             this.datagrid_usuario.AllowUserToDeleteRows = false;
             this.datagrid_usuario.AllowUserToOrderColumns = true;
             this.datagrid_usuario.AutoGenerateColumns = false;
+            this.datagrid_usuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_usuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idUsuarioDataGridViewTextBoxColumn1,
@@ -171,62 +170,6 @@
             this.datagrid_usuario.Size = new System.Drawing.Size(1204, 135);
             this.datagrid_usuario.TabIndex = 1;
             // 
-            // idUsuarioDataGridViewTextBoxColumn1
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn1.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn1.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn1.Name = "idUsuarioDataGridViewTextBoxColumn1";
-            this.idUsuarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // primerApellidoDataGridViewTextBoxColumn1
-            // 
-            this.primerApellidoDataGridViewTextBoxColumn1.DataPropertyName = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn1.HeaderText = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn1.Name = "primerApellidoDataGridViewTextBoxColumn1";
-            this.primerApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // segundoApellidoDataGridViewTextBoxColumn1
-            // 
-            this.segundoApellidoDataGridViewTextBoxColumn1.DataPropertyName = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn1.HeaderText = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn1.Name = "segundoApellidoDataGridViewTextBoxColumn1";
-            this.segundoApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fotoDataGridViewImageColumn1
-            // 
-            this.fotoDataGridViewImageColumn1.DataPropertyName = "Foto";
-            this.fotoDataGridViewImageColumn1.HeaderText = "Foto";
-            this.fotoDataGridViewImageColumn1.Name = "fotoDataGridViewImageColumn1";
-            this.fotoDataGridViewImageColumn1.ReadOnly = true;
-            // 
-            // correoDataGridViewTextBoxColumn1
-            // 
-            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
-            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activoDataGridViewTextBoxColumn1
-            // 
-            this.activoDataGridViewTextBoxColumn1.DataPropertyName = "Activo";
-            this.activoDataGridViewTextBoxColumn1.HeaderText = "Activo";
-            this.activoDataGridViewTextBoxColumn1.Name = "activoDataGridViewTextBoxColumn1";
-            this.activoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
             // binding_usuario
             // 
             this.binding_usuario.DataMember = "Usuario";
@@ -239,10 +182,10 @@
             // 
             // navi_usuario
             // 
-            this.navi_usuario.AddNewItem = this.bindingNavigatorAddNewItem1;
+            this.navi_usuario.AddNewItem = null;
             this.navi_usuario.BindingSource = this.binding_usuario;
             this.navi_usuario.CountItem = this.bindingNavigatorCountItem1;
-            this.navi_usuario.DeleteItem = this.bindingNavigatorDeleteItem1;
+            this.navi_usuario.DeleteItem = null;
             this.navi_usuario.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.navi_usuario.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem1,
@@ -253,9 +196,7 @@
             this.bindingNavigatorSeparator4,
             this.bindingNavigatorMoveNextItem1,
             this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.bindingNavigatorAddNewItem1,
-            this.bindingNavigatorDeleteItem1});
+            this.bindingNavigatorSeparator5});
             this.navi_usuario.Location = new System.Drawing.Point(0, 0);
             this.navi_usuario.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.navi_usuario.MoveLastItem = this.bindingNavigatorMoveLastItem1;
@@ -267,30 +208,12 @@
             this.navi_usuario.TabIndex = 0;
             this.navi_usuario.Text = "bindingNavigator2";
             // 
-            // bindingNavigatorAddNewItem1
-            // 
-            this.bindingNavigatorAddNewItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem1.Text = "Agregar nuevo";
-            // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
             this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem1.Text = "de {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem1
-            // 
-            this.bindingNavigatorDeleteItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem1.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem1
             // 
@@ -368,12 +291,15 @@
             this.datagrid_bitacora.AllowUserToDeleteRows = false;
             this.datagrid_bitacora.AllowUserToOrderColumns = true;
             this.datagrid_bitacora.AutoGenerateColumns = false;
+            this.datagrid_bitacora.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.datagrid_bitacora.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datagrid_bitacora.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idBitacoraDataGridViewTextBoxColumn,
             this.idUsuarioDataGridViewTextBoxColumn,
             this.accionDataGridViewTextBoxColumn,
+            this.nombre_completo,
             this.tablaDataGridViewTextBoxColumn,
+            this.texto_accion,
             this.fechaHoraDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.primerApellidoDataGridViewTextBoxColumn,
@@ -390,83 +316,6 @@
             this.datagrid_bitacora.Size = new System.Drawing.Size(1204, 128);
             this.datagrid_bitacora.TabIndex = 1;
             // 
-            // idBitacoraDataGridViewTextBoxColumn
-            // 
-            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "IdBitacora";
-            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
-            this.idBitacoraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idUsuarioDataGridViewTextBoxColumn
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
-            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // accionDataGridViewTextBoxColumn
-            // 
-            this.accionDataGridViewTextBoxColumn.DataPropertyName = "Accion";
-            this.accionDataGridViewTextBoxColumn.HeaderText = "Accion";
-            this.accionDataGridViewTextBoxColumn.Name = "accionDataGridViewTextBoxColumn";
-            this.accionDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tablaDataGridViewTextBoxColumn
-            // 
-            this.tablaDataGridViewTextBoxColumn.DataPropertyName = "Tabla";
-            this.tablaDataGridViewTextBoxColumn.HeaderText = "Tabla";
-            this.tablaDataGridViewTextBoxColumn.Name = "tablaDataGridViewTextBoxColumn";
-            this.tablaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechaHoraDataGridViewTextBoxColumn
-            // 
-            this.fechaHoraDataGridViewTextBoxColumn.DataPropertyName = "FechaHora";
-            this.fechaHoraDataGridViewTextBoxColumn.HeaderText = "FechaHora";
-            this.fechaHoraDataGridViewTextBoxColumn.Name = "fechaHoraDataGridViewTextBoxColumn";
-            this.fechaHoraDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // primerApellidoDataGridViewTextBoxColumn
-            // 
-            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
-            this.primerApellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // segundoApellidoDataGridViewTextBoxColumn
-            // 
-            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
-            this.segundoApellidoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fotoDataGridViewImageColumn
-            // 
-            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
-            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
-            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
-            this.fotoDataGridViewImageColumn.ReadOnly = true;
-            // 
-            // correoDataGridViewTextBoxColumn
-            // 
-            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
-            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // activoDataGridViewTextBoxColumn
-            // 
-            this.activoDataGridViewTextBoxColumn.DataPropertyName = "Activo";
-            this.activoDataGridViewTextBoxColumn.HeaderText = "Activo";
-            this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
-            this.activoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // binding_bitacora
             // 
             this.binding_bitacora.DataMember = "Bitacora";
@@ -474,10 +323,10 @@
             // 
             // navi_bitacora
             // 
-            this.navi_bitacora.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.navi_bitacora.AddNewItem = null;
             this.navi_bitacora.BindingSource = this.binding_bitacora;
             this.navi_bitacora.CountItem = this.bindingNavigatorCountItem;
-            this.navi_bitacora.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.navi_bitacora.DeleteItem = null;
             this.navi_bitacora.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.navi_bitacora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -488,9 +337,7 @@
             this.bindingNavigatorSeparator1,
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.bindingNavigatorSeparator2});
             this.navi_bitacora.Location = new System.Drawing.Point(0, 0);
             this.navi_bitacora.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.navi_bitacora.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -502,30 +349,12 @@
             this.navi_bitacora.TabIndex = 0;
             this.navi_bitacora.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -753,6 +582,160 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // idUsuarioDataGridViewTextBoxColumn1
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn1.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn1.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn1.Name = "idUsuarioDataGridViewTextBoxColumn1";
+            this.idUsuarioDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // primerApellidoDataGridViewTextBoxColumn1
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn1.DataPropertyName = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn1.HeaderText = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn1.Name = "primerApellidoDataGridViewTextBoxColumn1";
+            this.primerApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn1
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn1.DataPropertyName = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn1.HeaderText = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn1.Name = "segundoApellidoDataGridViewTextBoxColumn1";
+            this.segundoApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fotoDataGridViewImageColumn1
+            // 
+            this.fotoDataGridViewImageColumn1.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn1.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn1.Name = "fotoDataGridViewImageColumn1";
+            this.fotoDataGridViewImageColumn1.ReadOnly = true;
+            this.fotoDataGridViewImageColumn1.Visible = false;
+            // 
+            // correoDataGridViewTextBoxColumn1
+            // 
+            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
+            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activoDataGridViewTextBoxColumn1
+            // 
+            this.activoDataGridViewTextBoxColumn1.DataPropertyName = "Activo";
+            this.activoDataGridViewTextBoxColumn1.HeaderText = "Activo";
+            this.activoDataGridViewTextBoxColumn1.Name = "activoDataGridViewTextBoxColumn1";
+            this.activoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.activoDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // idBitacoraDataGridViewTextBoxColumn
+            // 
+            this.idBitacoraDataGridViewTextBoxColumn.DataPropertyName = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.HeaderText = "IdBitacora";
+            this.idBitacoraDataGridViewTextBoxColumn.Name = "idBitacoraDataGridViewTextBoxColumn";
+            this.idBitacoraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn.Name = "idUsuarioDataGridViewTextBoxColumn";
+            this.idUsuarioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // accionDataGridViewTextBoxColumn
+            // 
+            this.accionDataGridViewTextBoxColumn.DataPropertyName = "Accion";
+            this.accionDataGridViewTextBoxColumn.HeaderText = "Accion";
+            this.accionDataGridViewTextBoxColumn.Name = "accionDataGridViewTextBoxColumn";
+            this.accionDataGridViewTextBoxColumn.ReadOnly = true;
+            this.accionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nombre_completo
+            // 
+            this.nombre_completo.HeaderText = "Nombre";
+            this.nombre_completo.Name = "nombre_completo";
+            this.nombre_completo.ReadOnly = true;
+            // 
+            // tablaDataGridViewTextBoxColumn
+            // 
+            this.tablaDataGridViewTextBoxColumn.DataPropertyName = "Tabla";
+            this.tablaDataGridViewTextBoxColumn.HeaderText = "Tabla";
+            this.tablaDataGridViewTextBoxColumn.Name = "tablaDataGridViewTextBoxColumn";
+            this.tablaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // texto_accion
+            // 
+            this.texto_accion.HeaderText = "Accion";
+            this.texto_accion.Name = "texto_accion";
+            this.texto_accion.ReadOnly = true;
+            // 
+            // fechaHoraDataGridViewTextBoxColumn
+            // 
+            this.fechaHoraDataGridViewTextBoxColumn.DataPropertyName = "FechaHora";
+            this.fechaHoraDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaHoraDataGridViewTextBoxColumn.Name = "fechaHoraDataGridViewTextBoxColumn";
+            this.fechaHoraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nombreDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // primerApellidoDataGridViewTextBoxColumn
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn.DataPropertyName = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn.HeaderText = "Primer Apellido";
+            this.primerApellidoDataGridViewTextBoxColumn.Name = "primerApellidoDataGridViewTextBoxColumn";
+            this.primerApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.primerApellidoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn.DataPropertyName = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.HeaderText = "Segundo Apellido";
+            this.segundoApellidoDataGridViewTextBoxColumn.Name = "segundoApellidoDataGridViewTextBoxColumn";
+            this.segundoApellidoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.segundoApellidoDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // fotoDataGridViewImageColumn
+            // 
+            this.fotoDataGridViewImageColumn.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn.Name = "fotoDataGridViewImageColumn";
+            this.fotoDataGridViewImageColumn.ReadOnly = true;
+            this.fotoDataGridViewImageColumn.Visible = false;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // activoDataGridViewTextBoxColumn
+            // 
+            this.activoDataGridViewTextBoxColumn.DataPropertyName = "Activo";
+            this.activoDataGridViewTextBoxColumn.HeaderText = "Activo";
+            this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
+            this.activoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.activoDataGridViewTextBoxColumn.Visible = false;
+            // 
             // Bitacoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -761,8 +744,10 @@
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Bitacoras";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bitacoras";
             this.Load += new System.EventHandler(this.Bitacoras_Load);
             this.pnlDatos.ResumeLayout(false);
@@ -807,9 +792,7 @@
         private System.Windows.Forms.Panel panel_usuario;
         private System.Windows.Forms.DataGridView datagrid_usuario;
         private System.Windows.Forms.BindingNavigator navi_usuario;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
@@ -821,9 +804,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView datagrid_bitacora;
         private System.Windows.Forms.BindingNavigator navi_bitacora;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -832,26 +813,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource binding_usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idBitacoraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn accionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tablaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHoraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn activoDataGridViewTextBoxColumn;
         private dsTableAdapters.UsuarioTableAdapter usuarioTableAdapter;
         private System.Windows.Forms.ListBox lbx_accion;
         private System.Windows.Forms.Label label7;
@@ -860,5 +822,26 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txb_tabla;
         private System.Windows.Forms.Label prueba;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idBitacoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idUsuarioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_completo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tablaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn texto_accion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn primerApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn segundoApellidoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewImageColumn fotoDataGridViewImageColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn activoDataGridViewTextBoxColumn;
     }
 }
