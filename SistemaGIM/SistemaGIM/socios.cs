@@ -95,5 +95,11 @@ namespace SistemaGIM
             txt_CodigoBarras_socio.Text = "";
            
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repSocios rep = new repSocios();
+            rep.ShowDialog();
+        }
     }
 }
