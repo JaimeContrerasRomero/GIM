@@ -184,6 +184,12 @@
     <Compile Include="rpEquipos.Designer.cs">
       <DependentUpon>rpEquipos.cs</DependentUpon>
     </Compile>
+    <Compile Include="rptProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptProductos.Designer.cs">
+      <DependentUpon>rptProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="SocioPesos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,10 @@
     <EmbeddedResource Include="rptCompras.rdlc" />
     <EmbeddedResource Include="rptEquipo.rdlc" />
     <EmbeddedResource Include="rptInventarios.rdlc" />
+    <EmbeddedResource Include="rptProductos.rdlc" />
+    <EmbeddedResource Include="rptProductos.resx">
+      <DependentUpon>rptProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptProveedores.rdlc" />
     <EmbeddedResource Include="SocioPesos.resx">
       <DependentUpon>SocioPesos.cs</DependentUpon>
