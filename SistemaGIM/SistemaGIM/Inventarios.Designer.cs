@@ -147,6 +147,7 @@
             this.btnReporte.Size = new System.Drawing.Size(56, 53);
             this.btnReporte.TabIndex = 3;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 

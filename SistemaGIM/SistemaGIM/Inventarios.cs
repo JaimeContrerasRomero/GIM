@@ -90,5 +90,11 @@ namespace SistemaGIM
 
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            rpeInventario ri = new rpeInventario();
+            ri.ShowDialog();
+        }
     }
 }
