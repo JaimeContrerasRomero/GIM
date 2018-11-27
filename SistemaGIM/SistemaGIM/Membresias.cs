@@ -81,5 +81,11 @@ namespace SistemaGIM
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repMembresias rm = new repMembresias();
+            rm.ShowDialog();
+        }
     }
 }
