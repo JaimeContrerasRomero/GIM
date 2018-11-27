@@ -89,5 +89,11 @@ namespace SistemaGIM
         {
             txtNombreProveedor.Text = "";
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repProveedores rp = new repProveedores();
+            rp.ShowDialog();
+        }
     }
 }

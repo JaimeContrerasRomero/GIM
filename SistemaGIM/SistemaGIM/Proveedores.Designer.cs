@@ -36,6 +36,8 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsetar = new System.Windows.Forms.Button();
             this.pnlRegistros = new System.Windows.Forms.Panel();
+            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
+            this.lblNombreProveedor = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pnlDatos = new System.Windows.Forms.Panel();
@@ -59,8 +61,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.proveedorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.proveedorTableAdapter = new SistemaGIM.dsTableAdapters.ProveedorTableAdapter();
-            this.lblNombreProveedor = new System.Windows.Forms.Label();
-            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
             this.pnlBotones.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             this.pnlDatos.SuspendLayout();
@@ -92,6 +92,7 @@
             this.btnReporte.Size = new System.Drawing.Size(42, 43);
             this.btnReporte.TabIndex = 3;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 
@@ -134,6 +135,22 @@
             this.pnlRegistros.Name = "pnlRegistros";
             this.pnlRegistros.Size = new System.Drawing.Size(941, 141);
             this.pnlRegistros.TabIndex = 4;
+            // 
+            // txtNombreProveedor
+            // 
+            this.txtNombreProveedor.Location = new System.Drawing.Point(201, 95);
+            this.txtNombreProveedor.Name = "txtNombreProveedor";
+            this.txtNombreProveedor.Size = new System.Drawing.Size(341, 20);
+            this.txtNombreProveedor.TabIndex = 9;
+            // 
+            // lblNombreProveedor
+            // 
+            this.lblNombreProveedor.AutoSize = true;
+            this.lblNombreProveedor.Location = new System.Drawing.Point(57, 102);
+            this.lblNombreProveedor.Name = "lblNombreProveedor";
+            this.lblNombreProveedor.Size = new System.Drawing.Size(113, 13);
+            this.lblNombreProveedor.TabIndex = 8;
+            this.lblNombreProveedor.Text = "Nombre De Proveedor";
             // 
             // button1
             // 
@@ -338,22 +355,6 @@
             // proveedorTableAdapter
             // 
             this.proveedorTableAdapter.ClearBeforeFill = true;
-            // 
-            // lblNombreProveedor
-            // 
-            this.lblNombreProveedor.AutoSize = true;
-            this.lblNombreProveedor.Location = new System.Drawing.Point(57, 102);
-            this.lblNombreProveedor.Name = "lblNombreProveedor";
-            this.lblNombreProveedor.Size = new System.Drawing.Size(113, 13);
-            this.lblNombreProveedor.TabIndex = 8;
-            this.lblNombreProveedor.Text = "Nombre De Proveedor";
-            // 
-            // txtNombreProveedor
-            // 
-            this.txtNombreProveedor.Location = new System.Drawing.Point(201, 95);
-            this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(341, 20);
-            this.txtNombreProveedor.TabIndex = 9;
             // 
             // Proveedores
             // 

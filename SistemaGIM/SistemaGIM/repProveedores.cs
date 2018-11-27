@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace SistemaGIM
 {
-    public partial class repProductos : Form
+    public partial class repProveedores : Form
     {
-        public repProductos()
+        public repProveedores()
         {
             InitializeComponent();
         }
 
-        private void repProductos_Load(object sender, EventArgs e)
+        private void repProveedores_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'ds.Producto' Puede moverla o quitarla según sea necesario.
-            this.ProductoTableAdapter.Fill(this.ds.Producto,null,"","",null,1);
-
+            // TODO: esta línea de código carga datos en la tabla 'ds.Proveedor' Puede moverla o quitarla según sea necesario.
+            this.ProveedorTableAdapter.Fill(this.ds.Proveedor, null, null, 1);
 
             this.reportViewer1.RefreshReport();
         }
