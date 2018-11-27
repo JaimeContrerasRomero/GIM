@@ -166,6 +166,12 @@
     <Compile Include="repCompras.Designer.cs">
       <DependentUpon>repCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="repProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repProductos.Designer.cs">
+      <DependentUpon>repProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="rpeInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     <EmbeddedResource Include="repCompras.resx">
       <DependentUpon>repCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="repProductos.resx">
+      <DependentUpon>repProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="rpeInventario.resx">
       <DependentUpon>rpeInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +274,7 @@
     <EmbeddedResource Include="rptCompras.rdlc" />
     <EmbeddedResource Include="rptEquipo.rdlc" />
     <EmbeddedResource Include="rptInventarios.rdlc" />
+    <EmbeddedResource Include="rptProductos.rdlc" />
     <EmbeddedResource Include="SocioPesos.resx">
       <DependentUpon>SocioPesos.cs</DependentUpon>
     </EmbeddedResource>

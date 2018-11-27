@@ -88,5 +88,11 @@ namespace SistemaGIM
             this.Actualizar();
             //el evento eliminar se agregara despues de conectar la base de datos
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repProductos rp = new repProductos();
+            rp.ShowDialog();
+        }
     }
 }
