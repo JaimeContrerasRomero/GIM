@@ -83,14 +83,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pnlRegistros = new System.Windows.Forms.Panel();
+            this.prueba = new System.Windows.Forms.Label();
             this.lbx_accion = new System.Windows.Forms.ListBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txb_tabla = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pnlBotones = new System.Windows.Forms.Panel();
-            this.txb_buscar = new System.Windows.Forms.TextBox();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -98,8 +99,6 @@
             this.bitacoraTableAdapter = new SistemaGIM.dsTableAdapters.BitacoraTableAdapter();
             this.usuarioTableAdapter = new SistemaGIM.dsTableAdapters.UsuarioTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txb_tabla = new System.Windows.Forms.TextBox();
-            this.prueba = new System.Windows.Forms.Label();
             this.pnlDatos.SuspendLayout();
             this.panel_bitacora.SuspendLayout();
             this.panel_usuario.SuspendLayout();
@@ -605,6 +604,15 @@
             this.pnlRegistros.Size = new System.Drawing.Size(1204, 174);
             this.pnlRegistros.TabIndex = 4;
             // 
+            // prueba
+            // 
+            this.prueba.AutoSize = true;
+            this.prueba.Location = new System.Drawing.Point(68, 92);
+            this.prueba.Name = "prueba";
+            this.prueba.Size = new System.Drawing.Size(53, 17);
+            this.prueba.TabIndex = 24;
+            this.prueba.Text = "prueba";
+            // 
             // lbx_accion
             // 
             this.lbx_accion.FormattingEnabled = true;
@@ -645,6 +653,13 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "tabla";
             // 
+            // txb_tabla
+            // 
+            this.txb_tabla.Location = new System.Drawing.Point(384, 26);
+            this.txb_tabla.Name = "txb_tabla";
+            this.txb_tabla.Size = new System.Drawing.Size(100, 22);
+            this.txb_tabla.TabIndex = 7;
+            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -669,7 +684,6 @@
             // 
             // pnlBotones
             // 
-            this.pnlBotones.Controls.Add(this.txb_buscar);
             this.pnlBotones.Controls.Add(this.btnReporte);
             this.pnlBotones.Controls.Add(this.btnEliminar);
             this.pnlBotones.Controls.Add(this.btnEditar);
@@ -681,13 +695,6 @@
             this.pnlBotones.Size = new System.Drawing.Size(1204, 64);
             this.pnlBotones.TabIndex = 3;
             // 
-            // txb_buscar
-            // 
-            this.txb_buscar.Location = new System.Drawing.Point(535, 22);
-            this.txb_buscar.Name = "txb_buscar";
-            this.txb_buscar.Size = new System.Drawing.Size(100, 22);
-            this.txb_buscar.TabIndex = 4;
-            // 
             // btnReporte
             // 
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
@@ -697,6 +704,7 @@
             this.btnReporte.Size = new System.Drawing.Size(56, 53);
             this.btnReporte.TabIndex = 3;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 
@@ -745,22 +753,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txb_tabla
-            // 
-            this.txb_tabla.Location = new System.Drawing.Point(384, 26);
-            this.txb_tabla.Name = "txb_tabla";
-            this.txb_tabla.Size = new System.Drawing.Size(100, 22);
-            this.txb_tabla.TabIndex = 7;
-            // 
-            // prueba
-            // 
-            this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(68, 92);
-            this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(53, 17);
-            this.prueba.TabIndex = 24;
-            this.prueba.Text = "prueba";
-            // 
             // Bitacoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -793,7 +785,6 @@
             this.pnlRegistros.ResumeLayout(false);
             this.pnlRegistros.PerformLayout();
             this.pnlBotones.ResumeLayout(false);
-            this.pnlBotones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -867,7 +858,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox txb_buscar;
         private System.Windows.Forms.TextBox txb_tabla;
         private System.Windows.Forms.Label prueba;
     }

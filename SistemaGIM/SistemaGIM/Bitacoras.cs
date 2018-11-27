@@ -23,6 +23,8 @@ namespace SistemaGIM
         {
             pnlRegistros.Enabled = false;
             this.actualizar();
+            prueba.Visible = false;
+            
             
             
 
@@ -143,6 +145,12 @@ namespace SistemaGIM
         {
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repBitacora rp = new repBitacora();
+            rp.ShowDialog();
         }
     }
 }
