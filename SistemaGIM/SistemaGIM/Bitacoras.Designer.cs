@@ -34,6 +34,14 @@
             this.panel_bitacora = new System.Windows.Forms.Panel();
             this.panel_usuario = new System.Windows.Forms.Panel();
             this.datagrid_usuario = new System.Windows.Forms.DataGridView();
+            this.idUsuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.binding_usuario = new System.Windows.Forms.BindingSource(this.components);
             this.ds = new SistemaGIM.ds();
             this.navi_usuario = new System.Windows.Forms.BindingNavigator(this.components);
@@ -48,6 +56,19 @@
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.panel2 = new System.Windows.Forms.Panel();
             this.datagrid_bitacora = new System.Windows.Forms.DataGridView();
+            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tablaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.texto_accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.binding_bitacora = new System.Windows.Forms.BindingSource(this.components);
             this.navi_bitacora = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -76,27 +97,6 @@
             this.bitacoraTableAdapter = new SistemaGIM.dsTableAdapters.BitacoraTableAdapter();
             this.usuarioTableAdapter = new SistemaGIM.dsTableAdapters.UsuarioTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.idUsuarioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoDataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.correoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idBitacoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idUsuarioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tablaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.texto_accion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaHoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segundoApellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos.SuspendLayout();
             this.panel_bitacora.SuspendLayout();
             this.panel_usuario.SuspendLayout();
@@ -121,7 +121,7 @@
             this.pnlDatos.Location = new System.Drawing.Point(0, 64);
             this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(1204, 316);
+            this.pnlDatos.Size = new System.Drawing.Size(1067, 316);
             this.pnlDatos.TabIndex = 5;
             // 
             // panel_bitacora
@@ -131,7 +131,7 @@
             this.panel_bitacora.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_bitacora.Location = new System.Drawing.Point(0, 0);
             this.panel_bitacora.Name = "panel_bitacora";
-            this.panel_bitacora.Size = new System.Drawing.Size(1204, 316);
+            this.panel_bitacora.Size = new System.Drawing.Size(1067, 316);
             this.panel_bitacora.TabIndex = 0;
             // 
             // panel_usuario
@@ -141,7 +141,7 @@
             this.panel_usuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_usuario.Location = new System.Drawing.Point(0, 154);
             this.panel_usuario.Name = "panel_usuario";
-            this.panel_usuario.Size = new System.Drawing.Size(1204, 162);
+            this.panel_usuario.Size = new System.Drawing.Size(1067, 162);
             this.panel_usuario.TabIndex = 1;
             // 
             // datagrid_usuario
@@ -167,8 +167,67 @@
             this.datagrid_usuario.Name = "datagrid_usuario";
             this.datagrid_usuario.ReadOnly = true;
             this.datagrid_usuario.RowTemplate.Height = 24;
-            this.datagrid_usuario.Size = new System.Drawing.Size(1204, 135);
+            this.datagrid_usuario.Size = new System.Drawing.Size(1067, 135);
             this.datagrid_usuario.TabIndex = 1;
+            // 
+            // idUsuarioDataGridViewTextBoxColumn1
+            // 
+            this.idUsuarioDataGridViewTextBoxColumn1.DataPropertyName = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn1.HeaderText = "IdUsuario";
+            this.idUsuarioDataGridViewTextBoxColumn1.Name = "idUsuarioDataGridViewTextBoxColumn1";
+            this.idUsuarioDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // nombreDataGridViewTextBoxColumn1
+            // 
+            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
+            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // primerApellidoDataGridViewTextBoxColumn1
+            // 
+            this.primerApellidoDataGridViewTextBoxColumn1.DataPropertyName = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn1.HeaderText = "PrimerApellido";
+            this.primerApellidoDataGridViewTextBoxColumn1.Name = "primerApellidoDataGridViewTextBoxColumn1";
+            this.primerApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // segundoApellidoDataGridViewTextBoxColumn1
+            // 
+            this.segundoApellidoDataGridViewTextBoxColumn1.DataPropertyName = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn1.HeaderText = "SegundoApellido";
+            this.segundoApellidoDataGridViewTextBoxColumn1.Name = "segundoApellidoDataGridViewTextBoxColumn1";
+            this.segundoApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // fotoDataGridViewImageColumn1
+            // 
+            this.fotoDataGridViewImageColumn1.DataPropertyName = "Foto";
+            this.fotoDataGridViewImageColumn1.HeaderText = "Foto";
+            this.fotoDataGridViewImageColumn1.Name = "fotoDataGridViewImageColumn1";
+            this.fotoDataGridViewImageColumn1.ReadOnly = true;
+            this.fotoDataGridViewImageColumn1.Visible = false;
+            // 
+            // correoDataGridViewTextBoxColumn1
+            // 
+            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
+            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
+            this.passwordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // activoDataGridViewTextBoxColumn1
+            // 
+            this.activoDataGridViewTextBoxColumn1.DataPropertyName = "Activo";
+            this.activoDataGridViewTextBoxColumn1.HeaderText = "Activo";
+            this.activoDataGridViewTextBoxColumn1.Name = "activoDataGridViewTextBoxColumn1";
+            this.activoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.activoDataGridViewTextBoxColumn1.Visible = false;
             // 
             // binding_usuario
             // 
@@ -204,7 +263,7 @@
             this.navi_usuario.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.navi_usuario.Name = "navi_usuario";
             this.navi_usuario.PositionItem = this.bindingNavigatorPositionItem1;
-            this.navi_usuario.Size = new System.Drawing.Size(1204, 27);
+            this.navi_usuario.Size = new System.Drawing.Size(1067, 27);
             this.navi_usuario.TabIndex = 0;
             this.navi_usuario.Text = "bindingNavigator2";
             // 
@@ -282,7 +341,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1204, 155);
+            this.panel2.Size = new System.Drawing.Size(1067, 155);
             this.panel2.TabIndex = 0;
             // 
             // datagrid_bitacora
@@ -313,333 +372,8 @@
             this.datagrid_bitacora.Name = "datagrid_bitacora";
             this.datagrid_bitacora.ReadOnly = true;
             this.datagrid_bitacora.RowTemplate.Height = 24;
-            this.datagrid_bitacora.Size = new System.Drawing.Size(1204, 128);
+            this.datagrid_bitacora.Size = new System.Drawing.Size(1067, 128);
             this.datagrid_bitacora.TabIndex = 1;
-            // 
-            // binding_bitacora
-            // 
-            this.binding_bitacora.DataMember = "Bitacora";
-            this.binding_bitacora.DataSource = this.ds;
-            // 
-            // navi_bitacora
-            // 
-            this.navi_bitacora.AddNewItem = null;
-            this.navi_bitacora.BindingSource = this.binding_bitacora;
-            this.navi_bitacora.CountItem = this.bindingNavigatorCountItem;
-            this.navi_bitacora.DeleteItem = null;
-            this.navi_bitacora.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.navi_bitacora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2});
-            this.navi_bitacora.Location = new System.Drawing.Point(0, 0);
-            this.navi_bitacora.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.navi_bitacora.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.navi_bitacora.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.navi_bitacora.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.navi_bitacora.Name = "navi_bitacora";
-            this.navi_bitacora.PositionItem = this.bindingNavigatorPositionItem;
-            this.navi_bitacora.Size = new System.Drawing.Size(1204, 27);
-            this.navi_bitacora.TabIndex = 0;
-            this.navi_bitacora.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // pnlRegistros
-            // 
-            this.pnlRegistros.Controls.Add(this.prueba);
-            this.pnlRegistros.Controls.Add(this.lbx_accion);
-            this.pnlRegistros.Controls.Add(this.label7);
-            this.pnlRegistros.Controls.Add(this.label2);
-            this.pnlRegistros.Controls.Add(this.label1);
-            this.pnlRegistros.Controls.Add(this.txb_tabla);
-            this.pnlRegistros.Controls.Add(this.btnCancelar);
-            this.pnlRegistros.Controls.Add(this.btnGuardar);
-            this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 380);
-            this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(1204, 174);
-            this.pnlRegistros.TabIndex = 4;
-            // 
-            // prueba
-            // 
-            this.prueba.AutoSize = true;
-            this.prueba.Location = new System.Drawing.Point(68, 92);
-            this.prueba.Name = "prueba";
-            this.prueba.Size = new System.Drawing.Size(53, 17);
-            this.prueba.TabIndex = 24;
-            this.prueba.Text = "prueba";
-            // 
-            // lbx_accion
-            // 
-            this.lbx_accion.FormattingEnabled = true;
-            this.lbx_accion.ItemHeight = 16;
-            this.lbx_accion.Items.AddRange(new object[] {
-            "insertar",
-            "actualizar",
-            "eliminar",
-            "ingreso al sistema"});
-            this.lbx_accion.Location = new System.Drawing.Point(135, 26);
-            this.lbx_accion.Name = "lbx_accion";
-            this.lbx_accion.Size = new System.Drawing.Size(158, 20);
-            this.lbx_accion.TabIndex = 23;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(66, 139);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
-            this.label7.TabIndex = 21;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(66, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "accion";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(321, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 17);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "tabla";
-            // 
-            // txb_tabla
-            // 
-            this.txb_tabla.Location = new System.Drawing.Point(384, 26);
-            this.txb_tabla.Name = "txb_tabla";
-            this.txb_tabla.Size = new System.Drawing.Size(100, 22);
-            this.txb_tabla.TabIndex = 7;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(973, 92);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(77, 66);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(888, 92);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(77, 66);
-            this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // pnlBotones
-            // 
-            this.pnlBotones.Controls.Add(this.btnReporte);
-            this.pnlBotones.Controls.Add(this.btnEliminar);
-            this.pnlBotones.Controls.Add(this.btnEditar);
-            this.pnlBotones.Controls.Add(this.btnInsetar);
-            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlBotones.Location = new System.Drawing.Point(0, 0);
-            this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(1204, 64);
-            this.pnlBotones.TabIndex = 3;
-            // 
-            // btnReporte
-            // 
-            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
-            this.btnReporte.Location = new System.Drawing.Point(208, 7);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(56, 53);
-            this.btnReporte.TabIndex = 3;
-            this.btnReporte.UseVisualStyleBackColor = true;
-            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(144, 7);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(56, 53);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(80, 7);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 53);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnInsetar
-            // 
-            this.btnInsetar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsetar.Image")));
-            this.btnInsetar.Location = new System.Drawing.Point(16, 7);
-            this.btnInsetar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnInsetar.Name = "btnInsetar";
-            this.btnInsetar.Size = new System.Drawing.Size(56, 53);
-            this.btnInsetar.TabIndex = 0;
-            this.btnInsetar.UseVisualStyleBackColor = true;
-            this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
-            // 
-            // bitacoraTableAdapter
-            // 
-            this.bitacoraTableAdapter.ClearBeforeFill = true;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // idUsuarioDataGridViewTextBoxColumn1
-            // 
-            this.idUsuarioDataGridViewTextBoxColumn1.DataPropertyName = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn1.HeaderText = "IdUsuario";
-            this.idUsuarioDataGridViewTextBoxColumn1.Name = "idUsuarioDataGridViewTextBoxColumn1";
-            this.idUsuarioDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // nombreDataGridViewTextBoxColumn1
-            // 
-            this.nombreDataGridViewTextBoxColumn1.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn1.Name = "nombreDataGridViewTextBoxColumn1";
-            this.nombreDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // primerApellidoDataGridViewTextBoxColumn1
-            // 
-            this.primerApellidoDataGridViewTextBoxColumn1.DataPropertyName = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn1.HeaderText = "PrimerApellido";
-            this.primerApellidoDataGridViewTextBoxColumn1.Name = "primerApellidoDataGridViewTextBoxColumn1";
-            this.primerApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // segundoApellidoDataGridViewTextBoxColumn1
-            // 
-            this.segundoApellidoDataGridViewTextBoxColumn1.DataPropertyName = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn1.HeaderText = "SegundoApellido";
-            this.segundoApellidoDataGridViewTextBoxColumn1.Name = "segundoApellidoDataGridViewTextBoxColumn1";
-            this.segundoApellidoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // fotoDataGridViewImageColumn1
-            // 
-            this.fotoDataGridViewImageColumn1.DataPropertyName = "Foto";
-            this.fotoDataGridViewImageColumn1.HeaderText = "Foto";
-            this.fotoDataGridViewImageColumn1.Name = "fotoDataGridViewImageColumn1";
-            this.fotoDataGridViewImageColumn1.ReadOnly = true;
-            this.fotoDataGridViewImageColumn1.Visible = false;
-            // 
-            // correoDataGridViewTextBoxColumn1
-            // 
-            this.correoDataGridViewTextBoxColumn1.DataPropertyName = "Correo";
-            this.correoDataGridViewTextBoxColumn1.HeaderText = "Correo";
-            this.correoDataGridViewTextBoxColumn1.Name = "correoDataGridViewTextBoxColumn1";
-            this.correoDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.ReadOnly = true;
-            this.passwordDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // activoDataGridViewTextBoxColumn1
-            // 
-            this.activoDataGridViewTextBoxColumn1.DataPropertyName = "Activo";
-            this.activoDataGridViewTextBoxColumn1.HeaderText = "Activo";
-            this.activoDataGridViewTextBoxColumn1.Name = "activoDataGridViewTextBoxColumn1";
-            this.activoDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.activoDataGridViewTextBoxColumn1.Visible = false;
             // 
             // idBitacoraDataGridViewTextBoxColumn
             // 
@@ -736,11 +470,277 @@
             this.activoDataGridViewTextBoxColumn.ReadOnly = true;
             this.activoDataGridViewTextBoxColumn.Visible = false;
             // 
+            // binding_bitacora
+            // 
+            this.binding_bitacora.DataMember = "Bitacora";
+            this.binding_bitacora.DataSource = this.ds;
+            // 
+            // navi_bitacora
+            // 
+            this.navi_bitacora.AddNewItem = null;
+            this.navi_bitacora.BindingSource = this.binding_bitacora;
+            this.navi_bitacora.CountItem = this.bindingNavigatorCountItem;
+            this.navi_bitacora.DeleteItem = null;
+            this.navi_bitacora.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.navi_bitacora.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2});
+            this.navi_bitacora.Location = new System.Drawing.Point(0, 0);
+            this.navi_bitacora.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.navi_bitacora.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.navi_bitacora.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.navi_bitacora.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.navi_bitacora.Name = "navi_bitacora";
+            this.navi_bitacora.PositionItem = this.bindingNavigatorPositionItem;
+            this.navi_bitacora.Size = new System.Drawing.Size(1067, 27);
+            this.navi_bitacora.TabIndex = 0;
+            this.navi_bitacora.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveFirstItem.Text = "Mover primero";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Posición";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveNextItem.Text = "Mover siguiente";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorMoveLastItem.Text = "Mover último";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // pnlRegistros
+            // 
+            this.pnlRegistros.Controls.Add(this.prueba);
+            this.pnlRegistros.Controls.Add(this.lbx_accion);
+            this.pnlRegistros.Controls.Add(this.label7);
+            this.pnlRegistros.Controls.Add(this.label2);
+            this.pnlRegistros.Controls.Add(this.label1);
+            this.pnlRegistros.Controls.Add(this.txb_tabla);
+            this.pnlRegistros.Controls.Add(this.btnCancelar);
+            this.pnlRegistros.Controls.Add(this.btnGuardar);
+            this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 380);
+            this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlRegistros.Name = "pnlRegistros";
+            this.pnlRegistros.Size = new System.Drawing.Size(1067, 174);
+            this.pnlRegistros.TabIndex = 4;
+            // 
+            // prueba
+            // 
+            this.prueba.AutoSize = true;
+            this.prueba.Location = new System.Drawing.Point(68, 92);
+            this.prueba.Name = "prueba";
+            this.prueba.Size = new System.Drawing.Size(53, 17);
+            this.prueba.TabIndex = 24;
+            this.prueba.Text = "prueba";
+            // 
+            // lbx_accion
+            // 
+            this.lbx_accion.FormattingEnabled = true;
+            this.lbx_accion.ItemHeight = 16;
+            this.lbx_accion.Items.AddRange(new object[] {
+            "Inserto",
+            "Actualizo",
+            "Elimino",
+            "Ingreso Al Sistema"});
+            this.lbx_accion.Location = new System.Drawing.Point(135, 26);
+            this.lbx_accion.Name = "lbx_accion";
+            this.lbx_accion.Size = new System.Drawing.Size(158, 20);
+            this.lbx_accion.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(66, 139);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(66, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 17);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "accion";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(319, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 17);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "tabla";
+            // 
+            // txb_tabla
+            // 
+            this.txb_tabla.Location = new System.Drawing.Point(382, 24);
+            this.txb_tabla.Name = "txb_tabla";
+            this.txb_tabla.Size = new System.Drawing.Size(100, 22);
+            this.txb_tabla.TabIndex = 7;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.Location = new System.Drawing.Point(973, 92);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(77, 66);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.Location = new System.Drawing.Point(888, 92);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(77, 66);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pnlBotones
+            // 
+            this.pnlBotones.Controls.Add(this.btnReporte);
+            this.pnlBotones.Controls.Add(this.btnEliminar);
+            this.pnlBotones.Controls.Add(this.btnEditar);
+            this.pnlBotones.Controls.Add(this.btnInsetar);
+            this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlBotones.Location = new System.Drawing.Point(0, 0);
+            this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlBotones.Name = "pnlBotones";
+            this.pnlBotones.Size = new System.Drawing.Size(1067, 64);
+            this.pnlBotones.TabIndex = 3;
+            // 
+            // btnReporte
+            // 
+            this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
+            this.btnReporte.Location = new System.Drawing.Point(208, 7);
+            this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(56, 53);
+            this.btnReporte.TabIndex = 3;
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.Location = new System.Drawing.Point(144, 7);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(56, 53);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.Location = new System.Drawing.Point(80, 7);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(56, 53);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnInsetar
+            // 
+            this.btnInsetar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsetar.Image")));
+            this.btnInsetar.Location = new System.Drawing.Point(16, 7);
+            this.btnInsetar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsetar.Name = "btnInsetar";
+            this.btnInsetar.Size = new System.Drawing.Size(56, 53);
+            this.btnInsetar.TabIndex = 0;
+            this.btnInsetar.UseVisualStyleBackColor = true;
+            this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
+            // 
+            // bitacoraTableAdapter
+            // 
+            this.bitacoraTableAdapter.ClearBeforeFill = true;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Bitacoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1204, 554);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);

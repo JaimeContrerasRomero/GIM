@@ -62,6 +62,10 @@ namespace SistemaGIM
 
             }
         }
+        public void Limpiar_campos()
+        {
+            this.txb_tabla.Text = "";
+        }
 
 
         private void btnInsetar_Click(object sender, EventArgs e)
@@ -80,11 +84,14 @@ namespace SistemaGIM
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            int seleccion= datagrid_bitacora.CurrentRow.Index;
             pnlBotones.Enabled = false;
             pnlRegistros.Enabled = true;
             estado = "editar";
             panel_bitacora.Enabled = true;
             panel_usuario.Enabled = true;
+            lbx_accion.SelectedItem = (string)datagrid_bitacora.Rows[seleccion].Cells[5].Value;
+            txb_tabla.Text = (string)datagrid_bitacora.Rows[seleccion].Cells[4].Value;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -114,22 +121,22 @@ namespace SistemaGIM
 
             string accion = (string)lbx_accion.SelectedItem;
             int accion_int = 0; ;
-            if (accion == "insertar")
+            if (accion == "Inserto")
             {
                 accion_int = 1;
 
             }
-            if (accion == "actualizar")
+            if (accion == "Actualizo")
             {
                 accion_int = 2;
 
             }
-            if (accion == "eliminar")
+            if (accion == "Elimino")
             {
                 accion_int = 3;
 
             }
-            if (accion == "ingreso al sistema")
+            if (accion == "Ingreso Al Sistema")
             {
                 accion_int = 4;
 
@@ -149,6 +156,9 @@ namespace SistemaGIM
                 }
                 if (estado == "editar")
                 {
+                    
+
+
                     int seleccionado_bitacora = datagrid_bitacora.CurrentRow.Index;
                     bitacoraTableAdapter.Update((int)datagrid_bitacora.Rows[seleccionado_bitacora].Cells[0].Value, (int)datagrid_usuario.Rows[seleccionado].Cells[0].Value, Convert.ToInt16(accion_int), txb_tabla.Text, DateTime.Now);
 
@@ -166,6 +176,7 @@ namespace SistemaGIM
            
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
+            Limpiar_campos();
 
         }
 
@@ -173,6 +184,7 @@ namespace SistemaGIM
         {
             pnlBotones.Enabled = true;
             pnlRegistros.Enabled = false;
+            Limpiar_campos();
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
