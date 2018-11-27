@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipos));
             System.Windows.Forms.Label idEquipoLabel;
             System.Windows.Forms.Label nombreLabel;
             System.Windows.Forms.Label cantidadLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Equipos));
             this.pnlBotones = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -42,6 +42,8 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.ds = new SistemaGIM.ds();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -53,29 +55,54 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.equipoDataGridView = new System.Windows.Forms.DataGridView();
-            this.pnlRegistros = new System.Windows.Forms.Panel();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ds = new SistemaGIM.ds();
-            this.equipoTableAdapter = new SistemaGIM.dsTableAdapters.EquipoTableAdapter();
             this.idEquipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableAdapterManager = new SistemaGIM.dsTableAdapters.TableAdapterManager();
-            this.idEquipoTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.pnlRegistros = new System.Windows.Forms.Panel();
             this.cantidadTextBox = new System.Windows.Forms.TextBox();
+            this.nombreTextBox = new System.Windows.Forms.TextBox();
+            this.idEquipoTextBox = new System.Windows.Forms.TextBox();
+            this.equipoTableAdapter = new SistemaGIM.dsTableAdapters.EquipoTableAdapter();
+            this.tableAdapterManager = new SistemaGIM.dsTableAdapters.TableAdapterManager();
             idEquipoLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
             cantidadLabel = new System.Windows.Forms.Label();
             this.pnlBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.equipoDataGridView)).BeginInit();
-            this.pnlRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ds)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.equipoDataGridView)).BeginInit();
+            this.pnlRegistros.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idEquipoLabel
+            // 
+            idEquipoLabel.AutoSize = true;
+            idEquipoLabel.Location = new System.Drawing.Point(15, 97);
+            idEquipoLabel.Name = "idEquipoLabel";
+            idEquipoLabel.Size = new System.Drawing.Size(55, 13);
+            idEquipoLabel.TabIndex = 5;
+            idEquipoLabel.Text = "Id Equipo:";
+            // 
+            // nombreLabel
+            // 
+            nombreLabel.AutoSize = true;
+            nombreLabel.Location = new System.Drawing.Point(170, 17);
+            nombreLabel.Name = "nombreLabel";
+            nombreLabel.Size = new System.Drawing.Size(47, 13);
+            nombreLabel.TabIndex = 6;
+            nombreLabel.Text = "Nombre:";
+            // 
+            // cantidadLabel
+            // 
+            cantidadLabel.AutoSize = true;
+            cantidadLabel.Location = new System.Drawing.Point(355, 17);
+            cantidadLabel.Name = "cantidadLabel";
+            cantidadLabel.Size = new System.Drawing.Size(52, 13);
+            cantidadLabel.TabIndex = 7;
+            cantidadLabel.Text = "Cantidad:";
             // 
             // pnlBotones
             // 
@@ -97,6 +124,7 @@
             this.btnReporte.Size = new System.Drawing.Size(42, 43);
             this.btnReporte.TabIndex = 3;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 
@@ -186,6 +214,16 @@
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataMember = "Equipo";
+            this.bindingSource1.DataSource = this.ds;
+            // 
+            // ds
+            // 
+            this.ds.DataSetName = "ds";
+            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bindingNavigatorCountItem
             // 
@@ -283,36 +321,6 @@
             this.equipoDataGridView.Size = new System.Drawing.Size(817, 338);
             this.equipoDataGridView.TabIndex = 6;
             // 
-            // pnlRegistros
-            // 
-            this.pnlRegistros.Controls.Add(cantidadLabel);
-            this.pnlRegistros.Controls.Add(this.cantidadTextBox);
-            this.pnlRegistros.Controls.Add(nombreLabel);
-            this.pnlRegistros.Controls.Add(this.nombreTextBox);
-            this.pnlRegistros.Controls.Add(idEquipoLabel);
-            this.pnlRegistros.Controls.Add(this.idEquipoTextBox);
-            this.pnlRegistros.Controls.Add(this.btnCancelar);
-            this.pnlRegistros.Controls.Add(this.btnGuardar);
-            this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 365);
-            this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(817, 52);
-            this.pnlRegistros.TabIndex = 7;
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Equipo";
-            this.bindingSource1.DataSource = this.ds;
-            // 
-            // ds
-            // 
-            this.ds.DataSetName = "ds";
-            this.ds.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // equipoTableAdapter
-            // 
-            this.equipoTableAdapter.ClearBeforeFill = true;
-            // 
             // idEquipoDataGridViewTextBoxColumn
             // 
             this.idEquipoDataGridViewTextBoxColumn.DataPropertyName = "IdEquipo";
@@ -341,6 +349,52 @@
             this.activoDataGridViewTextBoxColumn.Name = "activoDataGridViewTextBoxColumn";
             this.activoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // pnlRegistros
+            // 
+            this.pnlRegistros.Controls.Add(cantidadLabel);
+            this.pnlRegistros.Controls.Add(this.cantidadTextBox);
+            this.pnlRegistros.Controls.Add(nombreLabel);
+            this.pnlRegistros.Controls.Add(this.nombreTextBox);
+            this.pnlRegistros.Controls.Add(idEquipoLabel);
+            this.pnlRegistros.Controls.Add(this.idEquipoTextBox);
+            this.pnlRegistros.Controls.Add(this.btnCancelar);
+            this.pnlRegistros.Controls.Add(this.btnGuardar);
+            this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 365);
+            this.pnlRegistros.Name = "pnlRegistros";
+            this.pnlRegistros.Size = new System.Drawing.Size(817, 52);
+            this.pnlRegistros.TabIndex = 7;
+            // 
+            // cantidadTextBox
+            // 
+            this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Cantidad", true));
+            this.cantidadTextBox.Location = new System.Drawing.Point(413, 14);
+            this.cantidadTextBox.Name = "cantidadTextBox";
+            this.cantidadTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cantidadTextBox.TabIndex = 8;
+            this.cantidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidadTextBox_KeyPress);
+            // 
+            // nombreTextBox
+            // 
+            this.nombreTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Nombre", true));
+            this.nombreTextBox.Location = new System.Drawing.Point(223, 14);
+            this.nombreTextBox.Name = "nombreTextBox";
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.TabIndex = 7;
+            // 
+            // idEquipoTextBox
+            // 
+            this.idEquipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "IdEquipo", true));
+            this.idEquipoTextBox.Location = new System.Drawing.Point(76, 94);
+            this.idEquipoTextBox.Name = "idEquipoTextBox";
+            this.idEquipoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.idEquipoTextBox.TabIndex = 6;
+            // 
+            // equipoTableAdapter
+            // 
+            this.equipoTableAdapter.ClearBeforeFill = true;
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -359,59 +413,6 @@
             this.tableAdapterManager.UpdateOrder = SistemaGIM.dsTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.UsuarioTableAdapter = null;
             // 
-            // idEquipoLabel
-            // 
-            idEquipoLabel.AutoSize = true;
-            idEquipoLabel.Location = new System.Drawing.Point(15, 97);
-            idEquipoLabel.Name = "idEquipoLabel";
-            idEquipoLabel.Size = new System.Drawing.Size(55, 13);
-            idEquipoLabel.TabIndex = 5;
-            idEquipoLabel.Text = "Id Equipo:";
-            // 
-            // idEquipoTextBox
-            // 
-            this.idEquipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "IdEquipo", true));
-            this.idEquipoTextBox.Location = new System.Drawing.Point(76, 94);
-            this.idEquipoTextBox.Name = "idEquipoTextBox";
-            this.idEquipoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.idEquipoTextBox.TabIndex = 6;
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(170, 17);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(47, 13);
-            nombreLabel.TabIndex = 6;
-            nombreLabel.Text = "Nombre:";
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(223, 14);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nombreTextBox.TabIndex = 7;
-            // 
-            // cantidadLabel
-            // 
-            cantidadLabel.AutoSize = true;
-            cantidadLabel.Location = new System.Drawing.Point(355, 17);
-            cantidadLabel.Name = "cantidadLabel";
-            cantidadLabel.Size = new System.Drawing.Size(52, 13);
-            cantidadLabel.TabIndex = 7;
-            cantidadLabel.Text = "Cantidad:";
-            // 
-            // cantidadTextBox
-            // 
-            this.cantidadTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Cantidad", true));
-            this.cantidadTextBox.Location = new System.Drawing.Point(413, 14);
-            this.cantidadTextBox.Name = "cantidadTextBox";
-            this.cantidadTextBox.Size = new System.Drawing.Size(100, 20);
-            this.cantidadTextBox.TabIndex = 8;
-            this.cantidadTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cantidadTextBox_KeyPress);
-            // 
             // Equipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -429,11 +430,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.equipoDataGridView)).EndInit();
             this.pnlRegistros.ResumeLayout(false);
             this.pnlRegistros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ds)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

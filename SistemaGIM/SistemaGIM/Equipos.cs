@@ -104,5 +104,10 @@ namespace SistemaGIM
 
         }
 
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            rpEquipos rp = new rpEquipos();
+            rp.ShowDialog();
+        }
     }
 }
