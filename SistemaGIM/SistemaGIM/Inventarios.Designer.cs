@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventarios));
             this.pnlBotones = new System.Windows.Forms.Panel();
-            this.txt_buscar = new System.Windows.Forms.TextBox();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.btnReporte = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
@@ -109,8 +107,6 @@
             // 
             // pnlBotones
             // 
-            this.pnlBotones.Controls.Add(this.txt_buscar);
-            this.pnlBotones.Controls.Add(this.btn_buscar);
             this.pnlBotones.Controls.Add(this.btnReporte);
             this.pnlBotones.Controls.Add(this.btnEliminar);
             this.pnlBotones.Controls.Add(this.btnEditar);
@@ -121,22 +117,6 @@
             this.pnlBotones.Name = "pnlBotones";
             this.pnlBotones.Size = new System.Drawing.Size(1071, 64);
             this.pnlBotones.TabIndex = 1;
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(416, 13);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(253, 22);
-            this.txt_buscar.TabIndex = 5;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Location = new System.Drawing.Point(334, 13);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscar.TabIndex = 4;
-            this.btn_buscar.Text = "buscar";
-            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // btnReporte
             // 
@@ -669,7 +649,6 @@
             this.Text = "Inventarios";
             this.Load += new System.EventHandler(this.Inventarios_Load);
             this.pnlBotones.ResumeLayout(false);
-            this.pnlBotones.PerformLayout();
             this.pnlRegistros.ResumeLayout(false);
             this.pnlRegistros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_cantidad)).EndInit();
@@ -707,8 +686,6 @@
         private System.Windows.Forms.Panel pnlDatos;
         private ds ds;
         private dsTableAdapters.InventarioTableAdapter inventarioTableAdapter;
-        private System.Windows.Forms.TextBox txt_buscar;
-        private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.NumericUpDown num_cantidad;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
