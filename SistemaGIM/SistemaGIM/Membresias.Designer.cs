@@ -294,7 +294,7 @@
             // num_precio
             // 
             this.num_precio.Location = new System.Drawing.Point(398, 30);
-            this.num_precio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.num_precio.Margin = new System.Windows.Forms.Padding(2);
             this.num_precio.Name = "num_precio";
             this.num_precio.Size = new System.Drawing.Size(90, 20);
             this.num_precio.TabIndex = 7;
@@ -302,7 +302,7 @@
             // txb_descripcion
             // 
             this.txb_descripcion.Location = new System.Drawing.Point(122, 28);
-            this.txb_descripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txb_descripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txb_descripcion.Name = "txb_descripcion";
             this.txb_descripcion.Size = new System.Drawing.Size(76, 20);
             this.txb_descripcion.TabIndex = 6;
@@ -391,7 +391,9 @@
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Membresias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Membresias";
             this.Load += new System.EventHandler(this.Membresias_Load);
             this.pnlDatos.ResumeLayout(false);
