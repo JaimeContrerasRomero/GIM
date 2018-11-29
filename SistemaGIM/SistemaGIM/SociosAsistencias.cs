@@ -21,8 +21,7 @@ namespace SistemaGIM
         private void SociosAsistencias_Load(object sender, EventArgs e)
         {
             pnlRegistros.Enabled = false;
-            socioAsistenciaTableAdapter.Fill(ds.SocioAsistencia,null,null,"","","",null,"","",null,null,null,null,1);
-            socioTableAdapter.Fill(ds.Socio,null,"","","",null,"","",null,1);
+            this.actualizar();
 
 
         }
@@ -49,6 +48,7 @@ namespace SistemaGIM
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             //eliminar se agregar despues de conectar la base de datos
+            int seleccionado = dataSocioAsistencia.CurrentRow.Index;
 
             DialogResult resultado;
             int seleccionado_SocioAsistencia = dataSocioAsistencia.CurrentRow.Index;
@@ -110,6 +110,12 @@ namespace SistemaGIM
         private void pnlRegistros_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repSociosAsistencias sa = new repSociosAsistencias();
+            sa.ShowDialog();
         }
     }
 }

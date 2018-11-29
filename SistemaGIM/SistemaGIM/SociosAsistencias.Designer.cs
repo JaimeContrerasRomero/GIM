@@ -29,14 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label segundoApellidoLabel;
-            System.Windows.Forms.Label fechaNacimientoLabel;
-            System.Windows.Forms.Label telefonoLabel;
-            System.Windows.Forms.Label codigoBarrasLabel;
             System.Windows.Forms.Label fechaIngresoLabel;
             System.Windows.Forms.Label fechaLabel;
-            System.Windows.Forms.Label primerApellidoLabel;
-            System.Windows.Forms.Label nombreLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SociosAsistencias));
             this.pnlBotones = new System.Windows.Forms.Panel();
             this.btnReporte = new System.Windows.Forms.Button();
@@ -44,16 +38,16 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInsetar = new System.Windows.Forms.Button();
             this.pnlRegistros = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txb_salida_minuto = new System.Windows.Forms.TextBox();
+            this.txb_salida_hora = new System.Windows.Forms.TextBox();
+            this.txb_entrada_minuto = new System.Windows.Forms.TextBox();
+            this.txb_entrada_hora = new System.Windows.Forms.TextBox();
             this.dt_fecha = new System.Windows.Forms.DateTimePicker();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ds = new SistemaGIM.ds();
             this.fechaIngresoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.codigoBarrasTextBox = new System.Windows.Forms.TextBox();
-            this.telefonoTextBox = new System.Windows.Forms.TextBox();
-            this.fechaNacimientoDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.segundoApellidoTextBox = new System.Windows.Forms.TextBox();
-            this.primerApellidoTextBox = new System.Windows.Forms.TextBox();
-            this.nombreTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pnlDatos = new System.Windows.Forms.Panel();
@@ -112,18 +106,8 @@
             this.tableAdapterManager = new SistemaGIM.dsTableAdapters.TableAdapterManager();
             this.socioTableAdapter = new SistemaGIM.dsTableAdapters.SocioTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txb_entrada_minuto = new System.Windows.Forms.TextBox();
-            this.txb_entrada_hora = new System.Windows.Forms.TextBox();
-            this.txb_salida_minuto = new System.Windows.Forms.TextBox();
-            this.txb_salida_hora = new System.Windows.Forms.TextBox();
-            segundoApellidoLabel = new System.Windows.Forms.Label();
-            fechaNacimientoLabel = new System.Windows.Forms.Label();
-            telefonoLabel = new System.Windows.Forms.Label();
-            codigoBarrasLabel = new System.Windows.Forms.Label();
             fechaIngresoLabel = new System.Windows.Forms.Label();
             fechaLabel = new System.Windows.Forms.Label();
-            primerApellidoLabel = new System.Windows.Forms.Label();
-            nombreLabel = new System.Windows.Forms.Label();
             this.pnlBotones.SuspendLayout();
             this.pnlRegistros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -140,85 +124,23 @@
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // segundoApellidoLabel
-            // 
-            segundoApellidoLabel.AutoSize = true;
-            segundoApellidoLabel.Location = new System.Drawing.Point(12, 156);
-            segundoApellidoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            segundoApellidoLabel.Name = "segundoApellidoLabel";
-            segundoApellidoLabel.Size = new System.Drawing.Size(123, 17);
-            segundoApellidoLabel.TabIndex = 11;
-            segundoApellidoLabel.Text = "Segundo Apellido:";
-            // 
-            // fechaNacimientoLabel
-            // 
-            fechaNacimientoLabel.AutoSize = true;
-            fechaNacimientoLabel.Location = new System.Drawing.Point(355, 57);
-            fechaNacimientoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            fechaNacimientoLabel.Name = "fechaNacimientoLabel";
-            fechaNacimientoLabel.Size = new System.Drawing.Size(125, 17);
-            fechaNacimientoLabel.TabIndex = 12;
-            fechaNacimientoLabel.Text = "Fecha Nacimiento:";
-            // 
-            // telefonoLabel
-            // 
-            telefonoLabel.AutoSize = true;
-            telefonoLabel.Location = new System.Drawing.Point(355, 105);
-            telefonoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            telefonoLabel.Name = "telefonoLabel";
-            telefonoLabel.Size = new System.Drawing.Size(68, 17);
-            telefonoLabel.TabIndex = 14;
-            telefonoLabel.Text = "Telefono:";
-            // 
-            // codigoBarrasLabel
-            // 
-            codigoBarrasLabel.AutoSize = true;
-            codigoBarrasLabel.Location = new System.Drawing.Point(355, 143);
-            codigoBarrasLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            codigoBarrasLabel.Name = "codigoBarrasLabel";
-            codigoBarrasLabel.Size = new System.Drawing.Size(102, 17);
-            codigoBarrasLabel.TabIndex = 16;
-            codigoBarrasLabel.Text = "Codigo Barras:";
-            // 
             // fechaIngresoLabel
             // 
             fechaIngresoLabel.AutoSize = true;
-            fechaIngresoLabel.Location = new System.Drawing.Point(355, 175);
-            fechaIngresoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            fechaIngresoLabel.Location = new System.Drawing.Point(262, 31);
             fechaIngresoLabel.Name = "fechaIngresoLabel";
-            fechaIngresoLabel.Size = new System.Drawing.Size(102, 17);
+            fechaIngresoLabel.Size = new System.Drawing.Size(78, 13);
             fechaIngresoLabel.TabIndex = 18;
             fechaIngresoLabel.Text = "Fecha Ingreso:";
             // 
             // fechaLabel
             // 
             fechaLabel.AutoSize = true;
-            fechaLabel.Location = new System.Drawing.Point(845, 57);
-            fechaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            fechaLabel.Location = new System.Drawing.Point(300, 76);
             fechaLabel.Name = "fechaLabel";
-            fechaLabel.Size = new System.Drawing.Size(51, 17);
+            fechaLabel.Size = new System.Drawing.Size(40, 13);
             fechaLabel.TabIndex = 19;
             fechaLabel.Text = "Fecha:";
-            // 
-            // primerApellidoLabel
-            // 
-            primerApellidoLabel.AutoSize = true;
-            primerApellidoLabel.Location = new System.Drawing.Point(16, 96);
-            primerApellidoLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            primerApellidoLabel.Name = "primerApellidoLabel";
-            primerApellidoLabel.Size = new System.Drawing.Size(107, 17);
-            primerApellidoLabel.TabIndex = 10;
-            primerApellidoLabel.Text = "Primer Apellido:";
-            // 
-            // nombreLabel
-            // 
-            nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(56, 62);
-            nombreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(62, 17);
-            nombreLabel.TabIndex = 9;
-            nombreLabel.Text = "Nombre:";
             // 
             // pnlBotones
             // 
@@ -228,28 +150,26 @@
             this.pnlBotones.Controls.Add(this.btnInsetar);
             this.pnlBotones.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBotones.Location = new System.Drawing.Point(0, 0);
-            this.pnlBotones.Margin = new System.Windows.Forms.Padding(4);
             this.pnlBotones.Name = "pnlBotones";
-            this.pnlBotones.Size = new System.Drawing.Size(1827, 64);
+            this.pnlBotones.Size = new System.Drawing.Size(1028, 52);
             this.pnlBotones.TabIndex = 3;
             // 
             // btnReporte
             // 
             this.btnReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnReporte.Image")));
-            this.btnReporte.Location = new System.Drawing.Point(208, 7);
-            this.btnReporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReporte.Location = new System.Drawing.Point(156, 6);
             this.btnReporte.Name = "btnReporte";
-            this.btnReporte.Size = new System.Drawing.Size(56, 53);
+            this.btnReporte.Size = new System.Drawing.Size(42, 43);
             this.btnReporte.TabIndex = 3;
             this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(144, 7);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(108, 6);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(56, 53);
+            this.btnEliminar.Size = new System.Drawing.Size(42, 43);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -257,10 +177,9 @@
             // btnEditar
             // 
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.Location = new System.Drawing.Point(80, 7);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(60, 6);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(56, 53);
+            this.btnEditar.Size = new System.Drawing.Size(42, 43);
             this.btnEditar.TabIndex = 1;
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -268,16 +187,17 @@
             // btnInsetar
             // 
             this.btnInsetar.Image = ((System.Drawing.Image)(resources.GetObject("btnInsetar.Image")));
-            this.btnInsetar.Location = new System.Drawing.Point(16, 7);
-            this.btnInsetar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsetar.Location = new System.Drawing.Point(12, 6);
             this.btnInsetar.Name = "btnInsetar";
-            this.btnInsetar.Size = new System.Drawing.Size(56, 53);
+            this.btnInsetar.Size = new System.Drawing.Size(42, 43);
             this.btnInsetar.TabIndex = 0;
             this.btnInsetar.UseVisualStyleBackColor = true;
             this.btnInsetar.Click += new System.EventHandler(this.btnInsetar_Click);
             // 
             // pnlRegistros
             // 
+            this.pnlRegistros.Controls.Add(this.label2);
+            this.pnlRegistros.Controls.Add(this.label1);
             this.pnlRegistros.Controls.Add(this.txb_salida_minuto);
             this.pnlRegistros.Controls.Add(this.txb_salida_hora);
             this.pnlRegistros.Controls.Add(this.txb_entrada_minuto);
@@ -286,35 +206,71 @@
             this.pnlRegistros.Controls.Add(this.dt_fecha);
             this.pnlRegistros.Controls.Add(fechaIngresoLabel);
             this.pnlRegistros.Controls.Add(this.fechaIngresoDateTimePicker);
-            this.pnlRegistros.Controls.Add(codigoBarrasLabel);
-            this.pnlRegistros.Controls.Add(this.codigoBarrasTextBox);
-            this.pnlRegistros.Controls.Add(telefonoLabel);
-            this.pnlRegistros.Controls.Add(this.telefonoTextBox);
-            this.pnlRegistros.Controls.Add(fechaNacimientoLabel);
-            this.pnlRegistros.Controls.Add(this.fechaNacimientoDateTimePicker);
-            this.pnlRegistros.Controls.Add(segundoApellidoLabel);
-            this.pnlRegistros.Controls.Add(this.segundoApellidoTextBox);
-            this.pnlRegistros.Controls.Add(primerApellidoLabel);
-            this.pnlRegistros.Controls.Add(this.primerApellidoTextBox);
-            this.pnlRegistros.Controls.Add(nombreLabel);
-            this.pnlRegistros.Controls.Add(this.nombreTextBox);
             this.pnlRegistros.Controls.Add(this.button1);
             this.pnlRegistros.Controls.Add(this.button2);
             this.pnlRegistros.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRegistros.Location = new System.Drawing.Point(0, 705);
-            this.pnlRegistros.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlRegistros.Location = new System.Drawing.Point(0, 433);
             this.pnlRegistros.Name = "pnlRegistros";
-            this.pnlRegistros.Size = new System.Drawing.Size(1827, 217);
+            this.pnlRegistros.Size = new System.Drawing.Size(1028, 176);
             this.pnlRegistros.TabIndex = 4;
             this.pnlRegistros.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlRegistros_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(705, 93);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Hora de Salida";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(705, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Hora de Entrada";
+            // 
+            // txb_salida_minuto
+            // 
+            this.txb_salida_minuto.Location = new System.Drawing.Point(914, 86);
+            this.txb_salida_minuto.Margin = new System.Windows.Forms.Padding(2);
+            this.txb_salida_minuto.Name = "txb_salida_minuto";
+            this.txb_salida_minuto.Size = new System.Drawing.Size(76, 20);
+            this.txb_salida_minuto.TabIndex = 29;
+            // 
+            // txb_salida_hora
+            // 
+            this.txb_salida_hora.Location = new System.Drawing.Point(812, 86);
+            this.txb_salida_hora.Margin = new System.Windows.Forms.Padding(2);
+            this.txb_salida_hora.Name = "txb_salida_hora";
+            this.txb_salida_hora.Size = new System.Drawing.Size(76, 20);
+            this.txb_salida_hora.TabIndex = 28;
+            // 
+            // txb_entrada_minuto
+            // 
+            this.txb_entrada_minuto.Location = new System.Drawing.Point(914, 34);
+            this.txb_entrada_minuto.Margin = new System.Windows.Forms.Padding(2);
+            this.txb_entrada_minuto.Name = "txb_entrada_minuto";
+            this.txb_entrada_minuto.Size = new System.Drawing.Size(76, 20);
+            this.txb_entrada_minuto.TabIndex = 27;
+            // 
+            // txb_entrada_hora
+            // 
+            this.txb_entrada_hora.Location = new System.Drawing.Point(812, 34);
+            this.txb_entrada_hora.Margin = new System.Windows.Forms.Padding(2);
+            this.txb_entrada_hora.Name = "txb_entrada_hora";
+            this.txb_entrada_hora.Size = new System.Drawing.Size(76, 20);
+            this.txb_entrada_hora.TabIndex = 26;
             // 
             // dt_fecha
             // 
             this.dt_fecha.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "Fecha", true));
-            this.dt_fecha.Location = new System.Drawing.Point(907, 52);
-            this.dt_fecha.Margin = new System.Windows.Forms.Padding(4);
+            this.dt_fecha.Location = new System.Drawing.Point(357, 69);
             this.dt_fecha.Name = "dt_fecha";
-            this.dt_fecha.Size = new System.Drawing.Size(265, 22);
+            this.dt_fecha.Size = new System.Drawing.Size(200, 20);
             this.dt_fecha.TabIndex = 20;
             // 
             // bindingSource1
@@ -330,73 +286,17 @@
             // fechaIngresoDateTimePicker
             // 
             this.fechaIngresoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "FechaIngreso", true));
-            this.fechaIngresoDateTimePicker.Location = new System.Drawing.Point(491, 167);
-            this.fechaIngresoDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
+            this.fechaIngresoDateTimePicker.Location = new System.Drawing.Point(357, 31);
             this.fechaIngresoDateTimePicker.Name = "fechaIngresoDateTimePicker";
-            this.fechaIngresoDateTimePicker.Size = new System.Drawing.Size(265, 22);
+            this.fechaIngresoDateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.fechaIngresoDateTimePicker.TabIndex = 19;
-            // 
-            // codigoBarrasTextBox
-            // 
-            this.codigoBarrasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "CodigoBarras", true));
-            this.codigoBarrasTextBox.Location = new System.Drawing.Point(491, 134);
-            this.codigoBarrasTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.codigoBarrasTextBox.Name = "codigoBarrasTextBox";
-            this.codigoBarrasTextBox.Size = new System.Drawing.Size(132, 22);
-            this.codigoBarrasTextBox.TabIndex = 17;
-            // 
-            // telefonoTextBox
-            // 
-            this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Telefono", true));
-            this.telefonoTextBox.Location = new System.Drawing.Point(491, 105);
-            this.telefonoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.telefonoTextBox.Name = "telefonoTextBox";
-            this.telefonoTextBox.Size = new System.Drawing.Size(132, 22);
-            this.telefonoTextBox.TabIndex = 15;
-            // 
-            // fechaNacimientoDateTimePicker
-            // 
-            this.fechaNacimientoDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.bindingSource1, "FechaNacimiento", true));
-            this.fechaNacimientoDateTimePicker.Location = new System.Drawing.Point(491, 49);
-            this.fechaNacimientoDateTimePicker.Margin = new System.Windows.Forms.Padding(4);
-            this.fechaNacimientoDateTimePicker.Name = "fechaNacimientoDateTimePicker";
-            this.fechaNacimientoDateTimePicker.Size = new System.Drawing.Size(265, 22);
-            this.fechaNacimientoDateTimePicker.TabIndex = 13;
-            // 
-            // segundoApellidoTextBox
-            // 
-            this.segundoApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "SegundoApellido", true));
-            this.segundoApellidoTextBox.Location = new System.Drawing.Point(131, 153);
-            this.segundoApellidoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.segundoApellidoTextBox.Name = "segundoApellidoTextBox";
-            this.segundoApellidoTextBox.Size = new System.Drawing.Size(132, 22);
-            this.segundoApellidoTextBox.TabIndex = 12;
-            // 
-            // primerApellidoTextBox
-            // 
-            this.primerApellidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "PrimerApellido", true));
-            this.primerApellidoTextBox.Location = new System.Drawing.Point(131, 96);
-            this.primerApellidoTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.primerApellidoTextBox.Name = "primerApellidoTextBox";
-            this.primerApellidoTextBox.Size = new System.Drawing.Size(132, 22);
-            this.primerApellidoTextBox.TabIndex = 11;
-            // 
-            // nombreTextBox
-            // 
-            this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.bindingSource1, "Nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(127, 53);
-            this.nombreTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(132, 22);
-            this.nombreTextBox.TabIndex = 10;
             // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1619, 68);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(1214, 55);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 66);
+            this.button1.Size = new System.Drawing.Size(58, 54);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -404,10 +304,9 @@
             // button2
             // 
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(1497, 70);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(1123, 57);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 66);
+            this.button2.Size = new System.Drawing.Size(58, 54);
             this.button2.TabIndex = 6;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -417,10 +316,9 @@
             this.pnlDatos.Controls.Add(this.panel2);
             this.pnlDatos.Controls.Add(this.panel1);
             this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlDatos.Location = new System.Drawing.Point(0, 64);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlDatos.Location = new System.Drawing.Point(0, 52);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(1827, 641);
+            this.pnlDatos.Size = new System.Drawing.Size(1028, 381);
             this.pnlDatos.TabIndex = 5;
             // 
             // panel2
@@ -428,10 +326,9 @@
             this.panel2.Controls.Add(this.dataSocio);
             this.panel2.Controls.Add(this.bindingNavigator2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 400);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 185);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1827, 241);
+            this.panel2.Size = new System.Drawing.Size(1028, 196);
             this.panel2.TabIndex = 1;
             // 
             // dataSocio
@@ -454,10 +351,9 @@
             this.dataSocio.DataSource = this.bindingSource2;
             this.dataSocio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataSocio.Location = new System.Drawing.Point(0, 27);
-            this.dataSocio.Margin = new System.Windows.Forms.Padding(4);
             this.dataSocio.Name = "dataSocio";
             this.dataSocio.ReadOnly = true;
-            this.dataSocio.Size = new System.Drawing.Size(1827, 214);
+            this.dataSocio.Size = new System.Drawing.Size(1028, 169);
             this.dataSocio.TabIndex = 1;
             // 
             // idSocioDataGridViewTextBoxColumn1
@@ -554,7 +450,7 @@
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1827, 27);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1028, 27);
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -570,7 +466,7 @@
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem1.Text = "de {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Número total de elementos";
             // 
@@ -611,7 +507,7 @@
             this.bindingNavigatorPositionItem1.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem1.AutoSize = false;
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(65, 27);
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Posición actual";
             // 
@@ -649,9 +545,8 @@
             this.panel1.Controls.Add(this.bindingNavigator1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1827, 393);
+            this.panel1.Size = new System.Drawing.Size(1028, 319);
             this.panel1.TabIndex = 0;
             // 
             // dataSocioAsistencia
@@ -678,10 +573,9 @@
             this.dataSocioAsistencia.DataSource = this.bindingSource1;
             this.dataSocioAsistencia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataSocioAsistencia.Location = new System.Drawing.Point(0, 27);
-            this.dataSocioAsistencia.Margin = new System.Windows.Forms.Padding(4);
             this.dataSocioAsistencia.Name = "dataSocioAsistencia";
             this.dataSocioAsistencia.ReadOnly = true;
-            this.dataSocioAsistencia.Size = new System.Drawing.Size(1827, 366);
+            this.dataSocioAsistencia.Size = new System.Drawing.Size(1028, 292);
             this.dataSocioAsistencia.TabIndex = 1;
             // 
             // idSocioAsistenciaDataGridViewTextBoxColumn
@@ -801,7 +695,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1827, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1028, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -817,7 +711,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 24);
             this.bindingNavigatorCountItem.Text = "de {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
             // 
@@ -858,7 +752,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Posición";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(65, 27);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
@@ -922,45 +816,16 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txb_entrada_minuto
-            // 
-            this.txb_entrada_minuto.Location = new System.Drawing.Point(1324, 94);
-            this.txb_entrada_minuto.Name = "txb_entrada_minuto";
-            this.txb_entrada_minuto.Size = new System.Drawing.Size(100, 22);
-            this.txb_entrada_minuto.TabIndex = 27;
-            // 
-            // txb_entrada_hora
-            // 
-            this.txb_entrada_hora.Location = new System.Drawing.Point(1218, 94);
-            this.txb_entrada_hora.Name = "txb_entrada_hora";
-            this.txb_entrada_hora.Size = new System.Drawing.Size(100, 22);
-            this.txb_entrada_hora.TabIndex = 26;
-            // 
-            // txb_salida_minuto
-            // 
-            this.txb_salida_minuto.Location = new System.Drawing.Point(1324, 134);
-            this.txb_salida_minuto.Name = "txb_salida_minuto";
-            this.txb_salida_minuto.Size = new System.Drawing.Size(100, 22);
-            this.txb_salida_minuto.TabIndex = 29;
-            // 
-            // txb_salida_hora
-            // 
-            this.txb_salida_hora.Location = new System.Drawing.Point(1218, 134);
-            this.txb_salida_hora.Name = "txb_salida_hora";
-            this.txb_salida_hora.Size = new System.Drawing.Size(100, 22);
-            this.txb_salida_hora.TabIndex = 28;
-            // 
             // SociosAsistencias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1827, 922);
+            this.ClientSize = new System.Drawing.Size(1028, 609);
             this.Controls.Add(this.pnlDatos);
             this.Controls.Add(this.pnlRegistros);
             this.Controls.Add(this.pnlBotones);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SociosAsistencias";
             this.Text = "SociosAsistencias";
             this.Load += new System.EventHandler(this.SociosAsistencias_Load);
@@ -1001,15 +866,9 @@
         private System.Windows.Forms.DateTimePicker fechaIngresoDateTimePicker;
         private System.Windows.Forms.BindingSource bindingSource1;
         private ds ds;
-        private System.Windows.Forms.TextBox codigoBarrasTextBox;
-        private System.Windows.Forms.TextBox telefonoTextBox;
-        private System.Windows.Forms.DateTimePicker fechaNacimientoDateTimePicker;
-        private System.Windows.Forms.TextBox segundoApellidoTextBox;
         private dsTableAdapters.SocioAsistenciaTableAdapter socioAsistenciaTableAdapter;
         private dsTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DateTimePicker dt_fecha;
-        private System.Windows.Forms.TextBox primerApellidoTextBox;
-        private System.Windows.Forms.TextBox nombreTextBox;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataSocio;
         private System.Windows.Forms.DataGridViewTextBoxColumn idSocioDataGridViewTextBoxColumn1;
@@ -1067,5 +926,7 @@
         private System.Windows.Forms.TextBox txb_salida_hora;
         private System.Windows.Forms.TextBox txb_entrada_minuto;
         private System.Windows.Forms.TextBox txb_entrada_hora;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
