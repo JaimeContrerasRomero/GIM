@@ -24,8 +24,8 @@ namespace SistemaGIM
             pnlRegistros.Enabled = false;
             this.actualizar();
             prueba.Visible = false;
-            
-            
+
+            this.actualizar();
             
 
             

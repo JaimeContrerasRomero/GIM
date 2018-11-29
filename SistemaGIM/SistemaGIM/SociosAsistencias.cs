@@ -26,9 +26,8 @@ namespace SistemaGIM
 
         }
         private void actualizar() {
-
-            socioAsistenciaTableAdapter.Fill(ds.SocioAsistencia, null, null, "", "", "", null, "", "", null, null, null, null, 1);
-            socioTableAdapter.Fill(ds.Socio, null, "", "", "", null, "", "", null, 1);
+            socioAsistenciaTableAdapter.Fill(ds.SocioAsistencia, null, null, null, null, null, null, null, null, null, null, null, null, 1);
+             socioTableAdapter.Fill(ds.Socio, null, "", "", "", null, "", "", null, 1);
         }
 
         private void btnInsetar_Click(object sender, EventArgs e)
