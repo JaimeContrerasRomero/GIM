@@ -35,6 +35,7 @@ namespace SistemaGIM
             this.pnlBotones.Enabled = x;
             this.pnlDatos.Enabled = x;
             this.pnlRegistros.Enabled =! x;
+
         }
 
         private void btnInsertar_Click(object sender, EventArgs e)
@@ -61,6 +62,19 @@ namespace SistemaGIM
         }
         private void cargadatos() {
             this.socioPesoTableAdapter.Fill(ds.SocioPeso, null, null, null, null, null, null, null, null, null, null, null, 1);
+            int x = gvDatos.RowCount;
+            if (x == 0)
+            {
+                btnEditar.Enabled = false;
+                btnEliminar.Enabled = false;
+
+
+            }
+            else
+            {
+                btnEditar.Enabled = true;
+                btnEliminar.Enabled = true;
+            }
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)
@@ -80,6 +94,12 @@ namespace SistemaGIM
                 this.socioPesoTableAdapter.Update(int.Parse(this.idSocioPesoTextBox.Text), int.Parse(this.idSocioTextBox.Text), this.pesoTextBox.Text, this.fechaDateTimePicker.Value,1);
             }
             cargadatos();
+        }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            repsociopesos rsp = new repsociopesos();
+            rsp.ShowDialog();
         }
     }
 }
