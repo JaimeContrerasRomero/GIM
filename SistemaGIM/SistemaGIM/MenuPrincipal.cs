@@ -106,5 +106,11 @@ namespace SistemaGIM
             Compras c = new Compras();
             c.ShowDialog();
         }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            Usuarios u = new Usuarios();
+            u.ShowDialog();
+        }
     }
 }

@@ -7,6 +7,9 @@
     }
 }
 
-namespace SistemaGIM.dsTableAdapters {
-    
+namespace SistemaGIM.dsTableAdapters
+{
+    partial class UsuarioTableAdapter
+    {
+    }
 }
