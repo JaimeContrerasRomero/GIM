@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>reportes de socios y menbrecias</Value>
+                <Value>Reportes de SociosMembrecias</Value>
                 <Style>
                   <FontSize>18pt</FontSize>
                   <FontWeight>Bold</FontWeight>
@@ -787,7 +787,7 @@
     <Height>2in</Height>
     <Style />
   </Body>
-  <Width>12.6651in</Width>
+  <Width>12.66511in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
