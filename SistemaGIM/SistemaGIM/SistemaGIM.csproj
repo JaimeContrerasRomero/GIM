@@ -178,6 +178,12 @@
     <Compile Include="repProveedores.Designer.cs">
       <DependentUpon>repProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="repsociopesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="repsociopesos.Designer.cs">
+      <DependentUpon>repsociopesos.cs</DependentUpon>
+    </Compile>
     <Compile Include="repSocios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <EmbeddedResource Include="repProveedores.resx">
       <DependentUpon>repProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="repsociopesos.resx">
+      <DependentUpon>repsociopesos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="repSocios.resx">
       <DependentUpon>repSocios.cs</DependentUpon>
     </EmbeddedResource>
@@ -322,6 +331,7 @@
       <DependentUpon>rptProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptProveedores.rdlc" />
+    <EmbeddedResource Include="rptsociopeso.rdlc" />
     <EmbeddedResource Include="rptSocios.rdlc" />
     <EmbeddedResource Include="rptSociosAsistencias.rdlc" />
     <EmbeddedResource Include="rptUsuario.rdlc" />
