@@ -83,13 +83,13 @@ namespace SistemaGIM
         private void SociosMembresias_Load(object sender, EventArgs e)
         {
             pnlRegistros.Enabled = false;
-            socioMembresiaTableAdapter.Fill(ds.SocioMembresia,null,null,"","","",null,"","",null,null,null,null,null,null,null,1);
+            socioMembresiaTableAdapter.Fill(ds.SocioMembresia,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,1);
             socioTableAdapter.Fill(ds.Socio, null, "", "", "", null, "", "", null, 1);
             membresiaTableAdapter.Fill(ds.Membresia, null, "", null, 1);
         }
         private void actualizar()
         {
-            socioMembresiaTableAdapter.Fill(ds.SocioMembresia, null, null, "", "", "", null, "", "", null, null, null, null, null, null, null, 1);
+            socioMembresiaTableAdapter.Fill(ds.SocioMembresia, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 1);
             socioTableAdapter.Fill(ds.Socio, null, "", "", "", null, "", "", null, 1);
             membresiaTableAdapter.Fill(ds.Membresia, null, "", null, 1);
         }
